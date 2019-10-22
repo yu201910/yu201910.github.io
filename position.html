@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .static-box {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: static;
+            top: 50px;
+            left: 50px;
+        }
+
+        .relative-b {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(243, 3, 3);
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        .absolute-r {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(223, 220, 46, 0.979);
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+
+        .absolute-b {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(82, 30, 224, 0.979);
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+
+        .fixed-b {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(19, 66, 121);
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="static-box"></div>
+    <div class="relative-b">
+        <div class="absolute-r"></div>
+
+    </div>
+
+    <div class="fixed-b"></div>
+    <div class="absolute-b"></div>
+
+
+
+
+
+
+
+</body>
+
+</html>
