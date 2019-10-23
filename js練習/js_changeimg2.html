@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="image_1" src="https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875_960_720.jpg" alt="">
+
+    <script>
+        var imageA = 'https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875_960_720.jpg'
+        var imageB = 'https://cdn.pixabay.com/photo/2014/02/27/16/08/splashing-275950_960_720.jpg'
+
+        var image = document.querySelector('#image_1');
+        image.onclick = function () {
+           
+            if (image.src == imageA) {
+                image.src = imageB
+            } else {
+                image.src = imageA
+
+            }
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
