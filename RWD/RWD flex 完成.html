@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0px;
+
+        }
+
+        .bodyall {
+            width: 100%;
+            height: 100vh;
+            background: rgba(12, 12, 12, 0.623);
+            display: flex;
+            align-items: center;
+            background-image:url('https://c.pxhere.com/photos/c5/31/adult_astronomy_astrophotography_constellation_couple_dark_dawn_dusk-1563871.jpg!d');
+            background-position: center;
+            background-size: cover;
+
+        }
+
+
+
+
+        .navbar {
+            width: 300px;
+            height: 100vh;
+            background-color: rgba(184, 182, 182, 0.642);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89aENm9zwhXGq3Ivi2MdVfiWwqX6K07Mm19Okp5M3YPPNSphr');
+            background-position: center;
+            margin: 30px;
+
+        }
+
+
+        nav ul {
+            list-style-type: none;
+            margin-top: 46px;
+            margin-right: 125px;
+
+        }
+
+        nav ul li {
+
+            font-family: fantasy;
+            font-size: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(39, 37, 34);
+
+        }
+
+        nav ul li a:hover {
+            color: rgb(255, 165, 0);
+
+        }
+
+        .RIGHT {
+            width: calc(100% - 300px);
+            height: calc(50vh + 250px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+
+        #all {
+            width: 800px;
+            height: 500px;
+            background-color: white;
+            display: flex;
+
+        }
+
+        #X {
+            flex-grow: 1;
+            background-color: firebrick;
+            background-image: url('https://cdn.pixabay.com/photo/2019/08/14/04/40/himalayas-4404708_960_720.jpg');
+            background-size: cover;
+
+        }
+
+        #X:hover {
+            background-image: url('https://cdn.pixabay.com/photo/2019/08/14/04/40/himalayas-4404708_960_720.jpg');
+            opacity: 0.6;
+            transform: scale(1.1);
+            transition: 0.5S;
+        }
+
+
+        #Y {
+            flex-grow: 1;
+            background-color: rgb(84, 34, 178);
+            background-image: url('https://images.pexels.com/photos/1541099/pexels-photo-1541099.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+
+        }
+
+        #Y:hover {
+            background-image: url('https://images.pexels.com/photos/1541099/pexels-photo-1541099.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            opacity: 0.6;
+            transform: scale(1.1);
+            transition: 0.5S;
+        }
+
+        #Z {
+            flex-grow: 1;
+            background-color: rgb(34, 178, 142);
+            background-image: url('https://images.pexels.com/photos/1977523/pexels-photo-1977523.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            background-size: cover;
+            background-position: right;
+        }
+
+        #Z:hover {
+            background-image: url('https://images.pexels.com/photos/1977523/pexels-photo-1977523.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+            opacity: 0.6;
+            transform: scale(1.1);
+            transition: 0.5S;
+        }
+
+
+        @media screen and (max-width:1280px) {
+
+            #all {
+                width: 600px;
+                height: 500px;
+                background-color: white;
+                margin: 0 auto;
+                margin-top: 10px;
+                display: flex;
+                flex-wrap: wrap;
+
+
+            }
+
+            #X {
+                width: 100%;
+                height: 250px;
+                background-color: firebrick;
+            }
+
+            #Y {
+                width: 50%;
+                height: 250px;
+                background-color: rgb(84, 34, 178);
+
+            }
+
+            #Z {
+                width: 50%;
+                height: 250px;
+                background-color: rgb(34, 178, 142);
+
+            }
+
+        }
+
+        @media screen and (max-width:900px) {
+            #all {
+                width: 80%;
+                height: 600px;
+                background-color: white;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: auto;
+
+            }
+
+
+            #X {
+                width: 100%;
+                height: 300px;
+                background-color: firebrick;
+
+            }
+
+            #Y {
+                width: 50%;
+                height: 300px;
+                background-color: rgb(84, 34, 178);
+            }
+
+            #Z {
+                width: 50%;
+                height: 300px;
+                background-color: rgb(34, 178, 142);
+
+            }
+
+
+            .bodyall {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .navbar {
+                width: 100vw;
+                height: 100px;
+                background-color: rgba(224, 223, 223, 0.719);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT89aENm9zwhXGq3Ivi2MdVfiWwqX6K07Mm19Okp5M3YPPNSphr');
+                background-position: center;
+                background-size: cover;
+            }
+
+
+            nav ul {
+                display: flex;
+                margin: 7px;
+
+            }
+
+            nav ul li a {
+                padding: 10px;
+            }
+
+        }
+
+        @media screen and (max-width:375px) {
+
+            #all {
+                width: 100%;
+                height: calc(100vh - 100px);
+                background-color: white;
+                margin: 0 auto;
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+
+
+            #X {
+                width: 100%;
+                height: 33%;
+                background-color: firebrick;
+
+            }
+
+            #Y {
+                width: 100%;
+                height: 34%;
+                background-color: rgb(84, 34, 178);
+
+            }
+
+            #Z {
+                width: 100%;
+                height: 33%;
+                background-color: rgb(34, 178, 142);
+
+            }
+
+            .RIGHT {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .navbar {
+                width: 100vw;
+                height: 100px;
+                background-color: gray;
+                position: relative;
+                
+
+            }
+
+            .logo {
+                position: absolute;
+                margin: 0 auto;
+                left: calc(50% - 40px);
+            }
+
+            
+            .menu {
+                width: 100px;
+                height: 110px;
+                display:none;
+                flex-direction: column;
+              
+                
+            }
+            
+           
+            nav ul li a {
+                font-size: 20px;
+                color: white;
+
+            }
+            
+
+
+            .btn {
+                width:50px;
+                height:50px;
+                color: white;
+                background-color: rgb(5, 5, 5);
+                position: absolute;
+                left: 15px;
+                background-image: url('http://www.ee.nsysu.edu.tw/alumni/info/201807/photo/menuicon.png');
+                background-position: center;
+                background-size: cover;
+            }
+
+
+            .btn:hover .menu {
+                display:flex;
+                position:absolute;
+                top: 45px;
+                padding: 0;
+                margin: 0;
+                background-color: rgba(5, 5, 5, 0.616);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bodyall">
+        <nav>
+            <div class="navbar">
+                <div class="logo"></div>
+                <div class="btn">
+               
+                    <ul class="menu" >
+                        <li>
+                            <a href="https://www.mountain-forecast.com/">MOUNTAIN</a>
+                        </li>
+                        <li>
+                            <a href="https://www.globalforestwatch.org/">FOREST</a>
+                        </li>
+                        <li>
+                            <a href="https://www.conservation.org/priorities/oceans">OCEAN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="RIGHT">
+            <div class="" id="all">
+                <div id="X"></div>
+                <div id="Y"></div>
+                <div id="Z"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
