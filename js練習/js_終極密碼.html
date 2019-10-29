@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    .card{
+        max-width: 400px;
+        margin:0 auto;
+    }
+
+    #reset_btn{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #reset_btn.show{
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.5s;
+        }
+
+</style>
+
+</head>
+
+<body>
+    <div class="card">
+        <h1>終極密碼(0~100)</h1>
+        <p id=text>遊戲開始遊戲開始遊戲開始遊戲開始遊戲開始遊戲開始</p>
+        <input  id ="guess_number" type="number" min="0" max="100" >
+        <button id="btn">click it</button>
+        <button id="reset_btn">restart </button>
+    </div>
+
+    <script>
+        var answer=  Math.floor((Math.random() * 100) + 1); 
+        // 產生一組0~100隨機亂碼
+        console.log("The answer is",answer);
+
+        var btn=document.querySelector("#btn");
+        var message=document.querySelector("#text");
+        var big_number=100;
+        var small_number=0;
+
+        var user_guess_number;
+        var guess_round=1;
+
+        var reset_btn=document.querySelector("#reset_btn")
+       
+    
+        btn.onclick=function(){
+            user_guess_number=parseInt(document.querySelector("#guess_number").value);
+            // 字串變數值
+         if(answer===user_guess_number){
+             message.textContent="Bingo!!! You have tried "+guess_round+" rounds.";
+
+             reset_btn.classList.add("show");
+        //    字串裡面加變數，有上下述兩種方法
+        //    "字串" +VAR+ "字串";
+            //  `字串 ${VAR} 字串 `
+            
+         
+
+
+         }else if(answer < user_guess_number){
+            
+            big_number=user_guess_number;
+            message.textContent=`Oops! It's too big ,the range is: ${small_number}~${big_number}`;
+            guess_round++
+
+            //  guess_round++  是 guess_round = guess_round+1
+
+        
+
+
+         }else if(answer > user_guess_number){
+            small_number=user_guess_number;
+            message.textContent=`Oops! It's too small,the range is: ${small_number}~${big_number}`
+            guess_round++
+
+            // console.log("oops!too small");
+         }
+
+         reset_btn.onclick=function(){
+            answer=  Math.floor((Math.random() * 100) + 1); 
+            console.log("The new answer is",answer);
+            message.textContent="重新開始遊戲";
+
+            big_number=100;
+            small_number=0;
+            guess_round=1;
+
+            document.querySelector("#guess_number").value='';
+            reset_btn.classList.remove("show");
+
+         }
+         }
+
+
+        
+
+
+
+    
+      
+    
+    
+    
+    </script>
+</body>
+</html>

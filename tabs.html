@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    body{
+        margin:0;
+        background-color:burlywood;
+}
+    
+    #tabs{
+        max-width: 400px;
+        margin:60px auto 0 auto;
+    }
+
+    .tabs_links{
+        display:flex;
+    }
+    
+    .tab_btn{
+        padding:5px 10px;
+        margin-right: 5px;
+        border-radius: 10px 10px 0 0 ;
+        background-color: brown;
+        color:white;
+        cursor: pointer;
+    
+    }
+    .tab_btn.active{
+        background-color: white;
+        color:brown;
+
+    }
+
+    .tab_content{
+        display:none;
+        padding:20px;
+        background-color:rgba(229, 183, 145, 0.938);
+    }
+
+    .tab_content.active{
+        display:block;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="tabs">
+        <div class="tabs_links">
+
+            <div id="tab_btn1"class="tab_btn active">Tab1</div>
+            <div id="tab_btn2"class="tab_btn">Tab2</div>
+            <div id="tab_btn3"class="tab_btn">Tab3</div>
+        </div>
+
+        <div class="tabs_contents">
+            <div id="tab_content1" class="tab_content active">
+                <h1>Tab1 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+            <div id="tab_content2" class="tab_content">
+                <h1>Tab2 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+            <div  id="tab_content3"class="tab_content">
+                <h1>Tab3 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+        </div>
+    </div>
+<script>
+    var tab_btn1 = document.querySelector("#tab_btn1");
+    var tab_btn2 = document.querySelector("#tab_btn2");
+    var tab_btn3 = document.querySelector("#tab_btn3");
+
+    var tab_content1 = document.querySelector("#tab_content1");
+    var tab_content2 = document.querySelector("#tab_content2");
+    var tab_content3 = document.querySelector("#tab_content3");
+    
+    tab_btn1.onclick= function(){
+        remove_active();
+        tab_btn1.classList.add('active');
+        tab_content1.classList.add('active');
+
+    }
+    tab_btn2.onclick= function(){
+        remove_active();
+        tab_btn2.classList.add('active');
+        tab_content2.classList.add('active');
+
+    }
+
+    tab_btn3.onclick= function(){
+        remove_active();
+        tab_btn3.classList.add('active');
+        tab_content3.classList.add('active');
+
+    }
+    function remove_active(){
+        tab_btn1.classList.remove('active');
+        tab_btn2.classList.remove('active');
+        tab_btn3.classList.remove('active');
+        tab_content1.classList.remove('active');
+        tab_content2.classList.remove('active'); 
+        tab_content3.classList.remove('active');
+        
+    }
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
