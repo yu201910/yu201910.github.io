@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    body{
+        margin:0;
+        background-color:#2C363F;
+        
+        /* #1F1209; */
+}
+    
+    #tabs{
+        max-width:400px;
+        margin:150px auto 0 auto;
+    }
+
+    .tabs_links{
+        display:flex;
+    }
+    
+    .tab_btn{
+        padding:5px 10px;
+        margin-right: 5px;
+        border-radius: 10px 10px 0 0 ;
+        background-color:#de7921;
+        color:white;
+        cursor: pointer;
+    
+    }
+    .tab_btn.active{
+        background-color:#CC2936;
+        color:black;
+
+    }
+
+    .tab_content{
+        display:none;
+        padding:20px;
+        background-color:#E5BD47;
+        /* #edaa53; */
+    }
+
+    .tab_content.active{
+        display:block;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="tabs">
+        <div class="tabs_links">
+
+            <div class="tab_btn active">Tab1</div>
+            <div class="tab_btn">Tab2</div>
+            <div class="tab_btn">Tab3</div>
+            <div class="tab_btn">Tab4</div>
+        </div>
+
+        <div class="tabs_contents">
+            <div  class="tab_content active">
+                <h1>Tab1 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+            <div  class="tab_content">
+                <h1>Tab2 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+            <div  class="tab_content">
+                <h1>Tab3 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+            <div  class="tab_content">
+                <h1>Tab4 Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis laboriosam ex accusamus obcaecati
+                    sequi fuga alias doloribus neque error ea sit a harum cum dolor beatae cupiditate blanditiis in esse
+                    adipisci impedit fugit, culpa rerum! Non ad necessitatibus illo aspernatur totam eos culpa, quam,
+                    eaque officiis repellendus maxime dicta facilis!</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    
+<script>
+   
+    // 宣告變數 用querySelectorAll 來抓取內含相同的class
+    var tab_btn_array = document.querySelectorAll(".tab_btn");
+    var tab_content_array= document.querySelectorAll(".tab_content");
+
+
+    // 初始值=0 ; i 小於 變數長度 ; i+1
+    for(let index=0; index<tab_btn_array.length; index++){
+        const tab_btn = tab_btn_array[index];
+
+    // 個別 → 按鍵事件   迴圈中抓所有可能陣列→[index] 做active
+        tab_btn.onclick = function(){
+            remove_active();
+            tab_btn_array[index].classList.add('active');
+            tab_content_array[index].classList.add('active');
+
+        }
+    }
+
+    function remove_active(){
+        // forof寫法
+        // for (const 元素取名 of 物件或陣列) {元素取名做甚麼事}
+
+        for (const tab_btn of tab_btn_array) {
+            tab_btn.classList.remove('active');
+            
+        }
+        // foreach寫法
+        // 陣列.forEach(元素取名 => {元素取名做甚麼事});
+
+            tab_content_array.forEach(tab_content => {
+            tab_content.classList.remove('active');
+
+        });
+       
+    }
+
+  
+
+
+    
+
+        // tab_btn1.classList.remove('active');
+        // tab_btn2.classList.remove('active');
+        // tab_btn3.classList.remove('active');
+        // tab_content1.classList.remove('active');
+        // tab_content2.classList.remove('active'); 
+        // tab_content3.classList.remove('active');
+        
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
