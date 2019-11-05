@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+
+    <style>
+        .cards{
+            display:flex;
+        }
+        .card{
+            width:33%;
+        }
+        .card_img{
+            width:100%;
+        
+        }
+        .card_content{
+            width:100%;
+            padding:0 100px;
+        }
+
+    
+    </style>
+
+</head>
+
+<div class="cards">
+    <!-- <div class="card">
+        <div class="card_img">
+            <img src="https://thestationeryshop.com.sg/wp-content/uploads/Pentel-Eraser-ZEH-03-400x400.jpg" alt="">
+        </div>
+        <div class="card_content">
+            <h1>eraser</h1>
+            <p> brand:pentel</p>
+        </div>
+    </div> -->
+
+</div>
+
+<body>
+
+    <script>
+        
+    var eraser={
+        name:"eraser",
+        brand:"pentel",
+        size:"midium",
+        color:"blue",
+    };    
+              
+    var pen={
+        name:"pen",
+        brand:"uni",
+        size:"normal",
+        color:"yellow",
+    };    
+            
+    var pencilCase={
+        name:"pencilCase",
+        brand:"unknown",
+        size:"small",
+        color:"green",
+    };    
+    
+    var inventory = [eraser,pen,pencilCase];
+    var cards = document.querySelector(".cards");
+    
+
+    inventory.forEach(element => {
+        cards.innerHTML =  cards.innerHTML + `<div class="card">
+        <div class="card_img">
+            <img src="https://thestationeryshop.com.sg/wp-content/uploads/Pentel-Eraser-ZEH-03-400x400.jpg" alt="">
+        </div>
+        <div class="card_content">
+            <h1>${element.name}</h1>
+            <p> ${element.brand}</p>
+            <p> ${element.size}</p>
+            <p> ${element.color}</p>
+
+        </div>
+    </div>`
+
+
+        
+    });
+ 
+    
+
+
+    
+    </script>
+</body>
+</html>
