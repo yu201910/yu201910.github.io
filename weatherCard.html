@@ -17,7 +17,7 @@
         }
 
         .card {
-           
+
             border: 1px solid;
             padding: 80px 100px;
         }
@@ -28,11 +28,18 @@
 
     <div class="cards">
         <!-- <div class="card">
+            <div class="card_image">
+                <img src="" alt="">
+                <div class="location_title">
                     <h1>台中市</h1>
-                    <h2>晴時多雲</h2>
-                    <p>降雨率: 50%</p>
-                    <p>溫度: 20 ~ 30C</p>
-                </div> -->
+                </div>
+            </div>
+            <div class="card_content">
+                <h2>晴時多雲</h2>
+                <p>降雨率: 50%</p>
+                <p>溫度: 20 ~ 30C</p>
+            </div>
+        </div> -->
     </div>
 
 
@@ -57,10 +64,15 @@
                     var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
 
                     cards.innerHTML += `<div class="card">
-                                            <h1>${locationName}</h1>
-                                            <h2>${Wx}</h2>
-                                            <p>降雨率: ${Pop}%</p>
-                                            <p>溫度: ${MinT} ~ ${MaxT}C</p>
+                                            <div class="card_image">
+                                                <img src="" alt="">
+                                                <div class="location_title"><h1>${locationName}</h1></div>
+                                            </div>
+                                            <div class="card_content">
+                                                <h2>${Wx}</h2>
+                                                <p>降雨率: ${Pop}%</p>
+                                                <p>溫度: ${MinT} ~ ${MaxT}C</p>
+                                            </div>
                                         </div>`;
                 });
 

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <title>microsoft bootsrap</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    @media (min-width: 1300px) {
+      .container {
+        max-width: 90%;
+      }
+    }
+
+    .info {
+      overflow: hidden;
+    }
+
+    .info .row {
+      position: relative;
+      height: 384px;
+    }
+
+    .info .row::before {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: -50%;
+      top: 0;
+      background-color: rgb(34, 128, 200);
+    }
+
+    .info .row::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      right: -50%;
+      top: 0;
+      background-color: rgb(95, 207, 99);
+    }
+
+    .info .col-xl-3:nth-child(1) {
+      background-color: rgb(37, 142, 222);
+    }
+
+    .info .col-xl-3:nth-child(2) {
+      background-color: rgb(79, 229, 255);
+    }
+
+    .info .col-xl-3:nth-child(3) {
+      background-color: rgb(207, 143, 255)
+    }
+
+    .info .col-xl-3:nth-child(4) {
+      background-color: rgb(105, 229, 110);
+    }
+
+    .info a {
+      display: block;
+      text-decoration: none;
+      color: black;
+    }
+
+    .icon {
+      min-height: 96px;
+      width: 100%;
+      text-align: left;
+      flex: 1 1 auto;
+      padding: 26px 26px 64px 11px;
+      
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .text {
+      width: 100%;
+      height:180px;
+      flex: 0 0 auto;
+      padding: 0px 26px;
+      padding-left:11px;
+
+    }
+
+    .text h2 {
+      font-size: 32px;
+      letter-spacing: -0.03rem;
+      line-height: 40px;
+      font-weight: 600;
+      margin: 0px 0px 26px;
+    }
+
+    .text p {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      margin: 0px;
+    }
+
+    .bottom {
+      height: 48px;
+      width: 100%;
+     
+      
+    }
+
+    .bottom img {
+      margin: 0px 16px 0px 15px;
+    }
+
+    span{
+      font-family:  "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+      letter-spacing: 0.01rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 col-12">
+          <a href="" >
+            <div class="icon">
+              <img src="../image/icon-globe.svg" alt="">
+            </div>
+            <div class="text">
+              <h2>Web</h2>
+              <p>Create your own web apps and add-ins.</p>
+            </div>
+            <div class="bottom">
+              <img src="../image/arrow-black.svg" alt="">
+              <span>Get started</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xl-3 col-md-6 col-12">
+          <a href=""data-aos="fade-up" data-aos-duration="3000">
+            <div class="icon">
+              <img src="../image/icon-windows.svg" alt="">
+            </div>
+            <div class="text">
+              <h2>Windows</h2>
+              <p>Create and publish your own Windows apps.</p>
+            </div>
+            <div class="bottom">
+              <img src="../image/arrow-black.svg" alt="">
+              <span>Get started</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-6 col-12">
+          <a href="">
+            <div class="icon">
+              <img src="../image/icon-ios.svg" alt="">
+            </div>
+            <div class="text">
+              <h2>iOS</h2>
+              <p>Take your custom apps to the mobile market.</p>
+            </div>
+            <div class="bottom">
+              <img src="../image/arrow-black.svg" alt="">
+              <span>Get started</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-3 col-md-6 col-12">
+          <a href="">
+            <div class="icon">
+              <img src="../image/icon-android.svg" alt="">
+            </div>
+            <div class="text">
+              <h2>Android</h2>
+              <p>Take your custom apps to the mobile market.</p>
+            </div>
+            <div class="bottom">
+              <img src="../image/arrow-black.svg" alt="">
+              <span>Get started</span>
+            </div>
+          </a>
+        </div>
+  </section>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
