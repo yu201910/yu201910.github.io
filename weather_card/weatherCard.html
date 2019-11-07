@@ -9,29 +9,59 @@
     <style>
         * {
             box-sizing: border-box;
+            
         }
-
+      
         .cards {
             display: flex;
             flex-wrap: wrap;
+            background-color:brown;
+
         }
 
         .card {
-
-            border: 1px solid;
-            padding: 80px 100px;
+            width:24%;
+            border: 3px solid;
+            margin:5px 0px 5px 10px;
+            background-color:burlywood;
         }
+        .card_image{
+            width:100%;
+            height:55%;
+            background-color:white;
+
+
+         
+        }
+        img{
+            width:100%; 
+            height:100%;
+           
+       
+
+        }
+        .location_title{
+            position: relative;
+            bottom:80px;
+            left:calc(50% - 50px);
+        }
+    
+
+        .card_content{
+            padding: 0 50px 0 25px;
+        }
+
     </style>
 </head>
 
 <body>
 
     <div class="cards">
-        <!-- <div class="card">
+        <div class="card">
             <div class="card_image">
-                <img src="" alt="">
+                <img src="./image_house/the-house-in-the-field.jpg" alt="">
                 <div class="location_title">
-                    <h1>台中市</h1>
+                   <h1>台中市</h1>
                 </div>
             </div>
             <div class="card_content">
@@ -39,7 +69,7 @@
                 <p>降雨率: 50%</p>
                 <p>溫度: 20 ~ 30C</p>
             </div>
-        </div> -->
+        </div>
     </div>
 
 
@@ -65,7 +95,7 @@
 
                     cards.innerHTML += `<div class="card">
                                             <div class="card_image">
-                                                <img src="" alt="">
+                                                <img src="./image_house/the-house-in-the-field.jpg" alt="">
                                                 <div class="location_title"><h1>${locationName}</h1></div>
                                             </div>
                                             <div class="card_content">
