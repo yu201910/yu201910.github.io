@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/microsoft.css">
 </head>
 
@@ -118,7 +119,7 @@
                         </a>
                     </div>
                     <div class="platform4">
-                        <a href="" data-aos="fade-up" data-aos-duration="3000">
+                        <a href="" >
                             <div class="icon">
                                 <img src="../image/icon-android.svg" alt="">
                             </div>
@@ -139,26 +140,35 @@
         <section id="main_heading">
             <div class="container">
                 <div class="main_heading_all">
-                    <div class="main_heading_title">
+                    <div class="main_heading_title"data-aos="fade-up"data-aos-duration="3000">
                         <h3>Natural on<br>every device</h3>
                     </div>
                     <div class="main_heading_content">
-                        <div class="content_active">
-                            <div class="content_text">
+                            <div class="content_text"data-aos="fade-up"data-aos-duration="3000">
                                 <p>People move and shift across devices and platforms throughout their day. From laptops to
                                     phones, from PCs to holograms. From office to living room, from real to virtual.
                                     Experiences seamlessly move and shift with them.</p>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="main_sphere"> 
+                <div class="container">
+                    <div class="rect_img"></div>
+                    <div class="line_img"></div>
+                    <div class="sphere_img"></div>
+                </div>
+        </section>
+
     </main>
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

@@ -173,7 +173,7 @@ img{
     display:flex;
 }
 .banner_text{
-    width:40%;
+    width:43%;
     background-color:black;
 }
 .banner_title{
@@ -184,16 +184,17 @@ img{
 }
 .banner_discription{
     color:white;
+    width:93%;
 }
 .banner_discription p{
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
     margin: 0px 0px 24px 0;
-    letter-spacing: 1px;
+    
 }
 .banner_img{
-    width:60%;
+    width:57%;
     height:100%;
     background-color:black;   
 }
@@ -266,7 +267,8 @@ img{
     letter-spacing: -0.03rem;
     line-height: 40px;
     font-weight: 600;
-    margin: 0px 0px 26px;
+    margin: 0px 0px 26px ;
+   
     
   }
 
@@ -324,21 +326,28 @@ img{
 }
 
 #main_heading{
-    height:120vh;
+    min-height:668px;
     background-image: url("https://www.microsoft.com/design/fluent/assets/images/msft-verge-fluent.jpg");
     background-attachment: fixed;
     background-position: 50% center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-/* .main_heading_all{
-} */
 
 h3{ 
     font-size: 96px;
     line-height: 120px;
     margin:0px;
+    padding:20px 0;
 }
+
+.main_heading_content{
+    margin:55px 500px 0 0 ;
+    padding:0 100px 0 0 ;
+    font-weight:600;
+    line-height: 24px;
+}
+
 
     
 
