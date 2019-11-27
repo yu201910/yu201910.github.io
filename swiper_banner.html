@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner_image {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-button-next{
+            color:darkgray;
+        }
+        .swiper-button-prev{
+            color:darkgray;
+        }
+        
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/首頁.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/首頁2.PNG" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/關於2.PNG" alt=""></div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+
+    <!-- js CDN -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      loop: true,
+    });
+    </script>
+</body>
+
+</html>

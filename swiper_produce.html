@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 40%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .popular_image {
+            width: 100%;
+            height: 60%;
+        }
+        .swiper-button-next{
+            color:darkgray;
+        }
+        .swiper-button-prev{
+            color:darkgray;
+        }
+      
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/香水.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/飼養箱人物製作.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/紙花心情燈.png" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/水彩圖畫書.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/書法入門套裝.png" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/手工筆記本裝訂套件.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/手動音樂盒.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/十字繡系列.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/凝膠蠟燭.jpg" alt=""></div>
+            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/保存動物紙玩具.jpg" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+         <!-- Add Arrows -->
+        <div class="swiper-button-next "></div>
+        <div class="swiper-button-prev "></div>
+
+    </div>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- js CDN -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>

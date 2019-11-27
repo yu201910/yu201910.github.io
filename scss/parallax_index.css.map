@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;CAEZ",
+    "sources": [
+        "parallax_index.scss",
+        "_variable.scss"
+    ],
+    "names": [],
+    "file": "parallax_index.css"
+}
