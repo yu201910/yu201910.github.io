@@ -16,7 +16,7 @@
         /* 導覽列 */
         .navbar {
             padding: 5px 10px;
-            
+
         }
 
         .brand_logo {
@@ -28,14 +28,16 @@
             width: 30px;
             height: 30px;
         }
-        .link_left{
-            margin-right:376px;
+
+        .link_left {
+            margin-right: 376px;
         }
 
         html,
         body {
             position: relative;
             height: 100%;
+            font-family: "Segoe UI", SegoeUI, "Microsoft JhengHei", 微軟正黑體, "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         /* 輪播 */
@@ -57,11 +59,50 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+
         }
 
         .banner_image {
             width: 100%;
+            position: relative;
         }
+
+        .banner_text {
+            position: absolute;
+            left: 70px;
+
+        }
+
+        .banner_text h1 {
+            font-size: 20px;
+            line-height: 40px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .banner_text p {
+            font-size: 15px;
+            line-height: 40px;
+            text-align: left;
+        }
+
+        .banner_button {
+            text-align: left;
+        }
+
+        .banner_button span {
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            line-height: 40px;
+            padding: 10px 25px;
+            cursor:pointer;
+
+        }
+
+
+        /* 卡片 */
 
         .cards {
             margin: 48px 0;
@@ -71,10 +112,50 @@
             width: 100%;
         }
 
+        .card-body {
+            padding-left: 0px;
+        }
+
+        .card-body .btn {
+            padding-left: 0px;
+            color:#0067b8;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
         .cards_title {
             font-size: 24px;
+            line-height: 24px;
             font-weight: 600;
-            padding: 15px 0;
+            padding: 0 0 20px 0;
+            text-align: left;
+        }
+
+        .card {
+            border: 0px white;
+        }
+
+        /* 第二張圖塊 */
+
+        .all {
+            position: relative;
+        }
+
+        .content_text {
+            position: absolute;
+            top: 150px;
+            left:68px;
+        }
+
+        .content_text h1 {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight:600;
         }
     </style>
 </head>
@@ -128,7 +209,7 @@
                         <a class="nav-link" href="#"><img class="search_icon" src="./image/購物車.PNG" alt=""></a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="#"><img class="search_icon" src="./image/會員.PNG" alt=""></a>
+                        <a class="nav-link" href="#"><img class="search_icon" src="./image/會員.PNG" alt=""></a>
                     </li>
                 </ul>
             </div>
@@ -137,8 +218,22 @@
         <div class="banner">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="banner_image" src="./image/banner1.webp" alt=""></div>
-                    <div class="swiper-slide"><img class="banner_image" src="./image/banner2.webp" alt=""></div>
+                    <div class="swiper-slide">
+                        <img class="banner_image" src="./image/banner1.webp" alt="">
+                        <div class="banner_text">
+                            <h1>全新的 Surface Pro 7</h1>
+                            <p>纖變萬化</p>
+                            <div class="banner_button"><span>立即選購></span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="banner_image" src="./image/banner2.webp" alt="">
+                        <div class="banner_text">
+                            <h1>全新的 Surface Laptop 3</h1>
+                            <p>每天使用的完美筆記型電腦，速度比以往更快</p>
+                            <div class="banner_button"><span>立即預購></span></div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -196,11 +291,14 @@
     <div class="content">
         <div class="container">
             <div class="all">
-                <div class="context"></div>
                 <div class="content_image">
                     <img src="./image/content.jpg" alt="">
                 </div>
-
+                <div class="content_text">
+                    <h1> Xbox One S</h1>
+                    <p>終極遊戲和 4K Ultra HD 娛樂系統。</p>
+                    <div class="banner_button"><span>了解更多 ></span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -266,6 +364,7 @@
                 el: '.swiper-pagination',
             },
             loop: true,
+            effect: 'fade',
         });
     </script>
 

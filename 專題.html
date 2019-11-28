@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner_image {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-button-next {
+            color: darkgray;
+        }
+
+        .swiper-button-prev {
+            color: darkgray;
+        }
+
+        /* 關於興趣箱 */
+        .about {
+            width: 100%;
+            background-color: #d8d8cf;
+            padding: 0 0 150px 0;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 50px 0;
+            padding: 50px 0 0 0;
+
+        }
+
+        .about_title h1 {
+            font-size: 35px;
+            font-weight: 600
+        }
+
+        .about_subtitle {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 40px 0;
+        }
+
+        .about_subtitle h2 {
+            font-size: 25px;
+            font-weight: 600
+        }
+
+
+        .about_top {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .about_image1 {
+            width: 50%;
+            height: 100%;
+            background-color: #d4edf4;
+        }
+
+        .about_image1 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .about_context1 {
+            width: 700px;
+            height: 200px;
+            background-color: black;
+            align-self: center;
+            position: absolute;
+            right: calc(50% - 600px);
+            opacity: 0.8;
+        }
+
+        .about_middle {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .about_image2 {
+            width:50%;
+            background-color: #d4edf4;
+        }
+
+        .about_image2 img {
+            height: 100%;
+        }
+
+        .about_context2 {
+            width: 700px;
+            height: 200px;
+            background-color: black;
+            align-self: center;
+            position: absolute;
+            left: calc(50% - 600px);
+            opacity: 0.8;
+        }
+
+        .about_bottom {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .about_image3 {
+            width: 50%;
+            background-color: #d4edf4;
+
+        }
+
+        .about_image3 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .about_context3 {
+            width: 700px;
+            height: 200px;
+            background-color: black;
+            align-self: center;
+            position: absolute;
+            right: calc(50% - 600px);
+            opacity: 0.8;
+        }
+
+
+        .about_footer {
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            opacity: 0.8;
+            margin: 150px 0 0 0;
+        }
+
+        /* 類型 */
+        .classification .row {
+            margin: 30px;
+        }
+
+        .classification_title h2 {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .classification_image {
+            width: 30%;
+
+        }
+
+        /* 組合方案 */
+
+        .subscription {
+            background-color: #d8d8cf;
+            padding-bottom: 50px;
+        }
+        .subscription_all{
+           width:90%;
+           margin:0 auto;
+        }
+
+        /* 個別商品 */
+        .product{
+           height:70vh;
+            
+        }
+        .popular_image {
+            width: 100%;
+            height: 40%;
+        }
+    
+       
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/首頁.jpg" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/首頁2.PNG" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="./02-素材/banner/關於2.PNG" alt=""></div>
+            </div>
+
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        關於興趣箱
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        立即訂閱
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">訂閱方案</a>
+                        <a class="dropdown-item" href="#">個別購買</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        教學說明
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">影音指導</a>
+                        <a class="dropdown-item" href="#">照片作品分享</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">聯絡我們</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="about">
+        <div class="title">
+            <h1>關於興趣箱</h1>
+        </div>
+        <div class="about_subtitle">
+            <h2>興趣箱是什麼?</h2>
+        </div>
+        <div class="about_content">
+            <div class="about_top">
+                <div class="about_image1">
+                    <img src="./02-素材/banner/關於2.PNG" alt="">
+                </div>
+                <div class="about_context1"></div>
+            </div>
+            <div class="about_middle">
+                <div class="about_image2">
+                    <img src="./02-素材/banner/IMG_4439.jpg" alt="">
+                </div>
+                <div class="about_context2"></div>
+            </div>
+            <div class="about_bottom">
+                <div class="about_image3">
+                    <img src="./02-素材/136.PNG" alt="">
+                </div>
+                <div class="about_context3"></div>
+            </div>
+
+        </div>
+        <div class="about_footer"></div>
+    </div>
+
+    <div class="classification">
+        <div class="container">
+            <div class="classification_title">
+                <h2> 興趣箱裡有什麼?</h2>
+            </div>
+            <div class="classification_content row">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/木製.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/植栽.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/皮革.jpg" alt="">
+            </div>
+            <div class="classification_content row">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/紙藝.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/著色.jpeg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/配飾.jpg" alt="">
+            </div>
+            <div class="classification_content row">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/食品.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/黏土.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-4 col-12" src="./02-素材/類型/木製.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="subscription">
+        <div class="container">
+            <div class="subscription_all">
+                <div class="title">
+                    <h2> 訂閱方案</h2>
+                </div>
+                <div class="subscription_content row">
+                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
+                        <img src="./02-素材/方案訂閱/1月.PNG" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">1個月方案</h5>
+                            <p class="card-text">$150/月</p>
+                            <a href="#" class="btn  btn-dark ">立即訂閱 </a>
+                        </div>
+                    </div>
+                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
+                        <img src="./02-素材/方案訂閱/3月.PNG" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">3個月方案</h5>
+                            <p class="card-text">$440/月</p>
+                            <a href="#" class="btn  btn-dark">立即訂閱 </a>
+                        </div>
+                    </div>
+                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
+                        <img src="./02-素材/方案訂閱/6月.PNG" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">6個月方案</h5>
+                            <p class="card-text">$870/月</p>
+                            <a href="#" class="btn btn-dark ">立即訂閱 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="container">
+                <div class="title">
+                    <h2>個別購買</h2>
+                </div>
+                <div class="swiper-container product_container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/香水.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/飼養箱人物製作.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/紙花心情燈.png" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/水彩圖畫書.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/書法入門套裝.png" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/手工筆記本裝訂套件.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/手動音樂盒.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/十字繡系列.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/凝膠蠟燭.jpg" alt=""></div>
+                            <div class="swiper-slide"><img class="popular_image" src="./02-素材/熱銷10/保存動物紙玩具.jpg" alt=""></div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                         <!-- Add Arrows -->
+                        <div class="swiper-button-next "></div>
+                        <div class="swiper-button-prev "></div>
+                 </div>
+        </div>
+    </div>
+
+    <div class="video">
+        <div class="container">
+            <div class="title"></div>
+
+        </div>
+    </div>
+
+    
+
+
+
+
+    <!-- js CDN -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+    </script>
+    <script>
+            var swiper = new Swiper('.product_container', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+</body>
+
+</html>
