@@ -101,8 +101,9 @@
         .about_subtitle {
             display: flex;
             justify-content: center;
-            margin:0 0 40px 0 ;
+            margin: 0 0 40px 0;
         }
+
         .about_subtitle h1 {
             font-size: 25px;
             font-weight: 600
@@ -199,6 +200,38 @@
             opacity: 0.8;
             margin: 150px 0 0 0;
         }
+
+        /* video */
+        .video {
+            background-color: #d8d8cf;
+        }
+
+        .video_content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 50px 0;
+        }
+
+        .title {
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* 常見問題 */
+        .question_content{
+            display:flex;
+            justify-content: center;
+        }
+        .accordion {
+            width: 80%;
+            padding:0 0 60px 0 ;
+        }
+        .card_question button{
+            color:black;
+        }
+       
+
     </style>
 
 </head>
@@ -297,8 +330,117 @@
 
         </div>
         <div class="about_footer"></div>
-
     </div>
+
+    <div class="video">
+        <div class="container">
+            <div class="title">
+                <h2>影片指導</h2>
+            </div>
+            <div class="video_content">
+                <iframe width="840" height="472.5" src="https://www.youtube.com/embed/UdEaUINOERQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="container">
+            <div class="title">
+                <h2>常見問題</h2>
+            </div>
+            <div class="question_content">
+                <div class="accordion" id="accordionExample">
+                    <div class="card card_question">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Q1.我的興趣箱什麼時候到達？
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                ANS.我們每一個月5日左右發貨，並需要1-3天的發貨時間。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card_question">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Q2.我未收到興趣箱怎麼辦?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                ANS.請立即通過信箱與我們聯繫。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card_question">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Q3.我的訂閱會自動續訂嗎？
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                ANS.不會自動續訂，但您將收到一封電子郵件，提醒您進行續訂。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card_question">
+                        <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Q4.您在國際上運送嗎？
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseFour" class="collapse " aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                ANS.是，國際訂單的統一費用為15美元。裝箱後會寄出USPS，然後由海關處理後再寄給您當地的郵政服務。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card_question">
+                        <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Q5.如何退貨?
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseFive" class=" collapse " aria-labelledby="headingFive"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                ANS.若材料包有重大瑕疵或者是缺件，請立即填寫留言表單與我們聯繫，會有專人為您服務。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact"></div>
 
 
 
