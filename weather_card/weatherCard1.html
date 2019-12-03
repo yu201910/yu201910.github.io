@@ -9,82 +9,67 @@
     <style>
         * {
             box-sizing: border-box;
-
+            
         }
-        body{
-            margin:0;
-        }
-
+      
         .cards {
             display: flex;
             flex-wrap: wrap;
-            background-image: url('https://cdn.pixabay.com/photo/2019/08/28/12/20/landscape-4436636_960_720.jpg');
-            background-size: contain; 
+            background-color:brown;
+
         }
 
         .card {
-            width: 24%;
-            margin: 5px 0px 5px 10px;
-            background-color: white;
-            border-radius: 1rem;
-                   
-
+            width:24%;
+            border: 3px solid;
+            margin:5px 0px 5px 10px;
+            background-color:burlywood;
         }
+        .card_image{
+            width:100%;
+            height:55%;
+            background-color:white;
 
-        .card_image {
-            width: 100%;
-            height: 55%;
+
+         
         }
-
-        img {
-            width: 100%;
-            height: 100%;
-            opacity: 0.8;
-            border-radius: 1rem 1rem 0 0;
-        }
-
-        .location_title {
-            position: relative;
-            bottom: 80px;
-            left: calc(50% - 50px);
-            color:white;
-            font-weight: 800;
-        }
-
-
-        .card_content {
-            display: flex;
-            justify-content: space-around;
+        img{
+            width:100%; 
+            height:100%;
            
+       
+
+        }
+        .location_title{
+            position: relative;
+            bottom:80px;
+            left:calc(50% - 50px);
+        }
+    
+
+        .card_content{
+            padding: 0 50px 0 25px;
         }
 
-        .card_weatherIcon img {
-            width: 150px;
-        }
     </style>
 </head>
 
 <body>
 
     <div class="cards">
-        <!-- <div class="card">
+        <div class="card">
             <div class="card_image">
-                <img src="./image_house/landscape.webp" alt="">
+                <img src="./image_house/the-house-in-the-field.jpg" alt="">
                 <div class="location_title">
-                    <h1>台中市</h1>
+                   <h1>台中市</h1>
                 </div>
             </div>
             <div class="card_content">
-                <div class="card_text">
-                    <h2>晴時多雲</h2>
-                    <p>降雨率: 50%</p>
-                    <p>溫度: 20 ~ 30C</p>
-                </div>
-                <div class="card_weatherIcon">
-                    <img src="./image_house/晴時多雲.svg" alt="">
-                </div>
+                <h2>晴時多雲</h2>
+                <p>降雨率: 50%</p>
+                <p>溫度: 20 ~ 30C</p>
             </div>
-        </div> -->
+        </div>
     </div>
 
 
@@ -100,7 +85,6 @@
 
                 var all_locations = res.records.location;
                 // console.log(all_locations);
-                var weather_image = ['image_house/晴時多雲.svg', 'image_house/陰天.png', 'image_house/短暫雨.png'];
 
                 all_locations.forEach(location => {
                     var locationName = location.locationName;
@@ -108,36 +92,17 @@
                     var Pop = location.weatherElement[1].time[0].parameter.parameterName;
                     var MinT = location.weatherElement[2].time[0].parameter.parameterName;
                     var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
-                    var Wx_2 = location.weatherElement[0].time[0].parameter.parameterValue;
-
-                    var Img;
-                    for (let index = 0; index < Wx_2.length; index++) {
-                        const oWx = Wx_2[index];
-                        if (oWx == '2') {
-                            Img = weather_image[0]; //氣候分辨代號2執行此項
-                        } else if (oWx == '5') {
-                            Img = weather_image[1]; //氣候分辨代號8執行此項
-                        } else {
-                            Img = weather_image[2]; //其餘執行此項
-                        }
-                    }
 
                     cards.innerHTML += `<div class="card">
                                             <div class="card_image">
-                                                <img src="./image_house/landscape.webp" alt="">
+                                                <img src="./image_house/the-house-in-the-field.jpg" alt="">
                                                 <div class="location_title"><h1>${locationName}</h1></div>
                                             </div>
                                             <div class="card_content">
-                                                    <div class="card_text">
-                                                        <h2>${Wx}</h2>
-                                                        <p>降雨率: ${Pop}%</p>
-                                                        <p>溫度: ${MinT} ~ ${MaxT}°C</p>
-                                                    </div>
-                                                    <div class="card_weatherIcon">
-                                                        <img src="${Img}" alt="">
-                                                    </div>
+                                                <h2>${Wx}</h2>
+                                                <p>降雨率: ${Pop}%</p>
+                                                <p>溫度: ${MinT} ~ ${MaxT}C</p>
                                             </div>
-                                        
                                         </div>`;
                 });
 

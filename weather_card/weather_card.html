@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border: 1px solid;
+            padding: 20px 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cards">
+        <!-- <div class="card">
+            <h1>台中市</h1>
+            <h2>晴時多雲</h2>
+            <p>降雨率: 50%</p>
+            <p>溫度: 20 ~ 30C</p>
+        </div> -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        var cards = document.querySelector(".cards");
+
+        $.ajax({
+            url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
+            success: function (res) {
+
+                var all_locations = res.records.location;
+                // console.log(all_locations);
+
+                all_locations.forEach(location => {
+                    var locationName = location.locationName;
+                    var Wx = location.weatherElement[0].time[0].parameter.parameterName;
+                    var Pop = location.weatherElement[1].time[0].parameter.parameterName;
+                    var MinT = location.weatherElement[2].time[0].parameter.parameterName;
+                    var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
+
+                    cards.innerHTML += `<div class="card">
+                                            <h1>${locationName}</h1>
+                                            <h2>${Wx}</h2>
+                                            <p>降雨率: ${Pop}%</p>
+                                            <p>溫度: ${MinT} ~ ${MaxT}C</p>
+                                        </div>`;
+                });
+
+            }
+        });
+
+        // $.ajax({
+        //     url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
+        //     success: function (res) {
+
+        //         var all_locations = res.records.location;
+        //         // console.log(all_locations);
+
+        //         all_locations.forEach(location => {
+        //             var locationName = location.locationName;
+        //             var Wx = location.weatherElement[0].time[0].parameter.parameterName;
+        //             var Pop = location.weatherElement[1].time[0].parameter.parameterName;
+        //             var MinT = location.weatherElement[2].time[0].parameter.parameterName;
+        //             var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
+
+        //             $(".cards").append(`<div class="card">
+        //                             <h1>${locationName}</h1>
+        //                             <h2>${Wx}</h2>
+        //                             <p>降雨率: ${Pop}%</p>
+        //                             <p>溫度: ${MinT} ~ ${MaxT}C</p>
+        //                         </div>`);
+        //         });
+
+        //     }
+        // });
+
+    </script>
+</body>
+
+</html>
