@@ -9,26 +9,27 @@
     <style>
         * {
             box-sizing: border-box;
-
         }
-        body{
-            margin:0;
+
+        body {    
+            background-image: url('https://cdn.pixabay.com/photo/2019/08/28/12/20/landscape-4436636_960_720.jpg');
+            background-size:contain;
+          
         }
 
         .cards {
+            width:100%;
             display: flex;
             flex-wrap: wrap;
-            background-image: url('https://cdn.pixabay.com/photo/2019/08/28/12/20/landscape-4436636_960_720.jpg');
-            background-size: contain; 
+            
         }
 
         .card {
-            width: 24%;
-            margin: 5px 0px 5px 10px;
+            width: 300px;
+            margin: 5px 5px 5px 5px;
             background-color: white;
             border-radius: 1rem;
-                   
-
+          
         }
 
         .card_image {
@@ -46,28 +47,33 @@
         .location_title {
             position: relative;
             bottom: 80px;
-            left: calc(50% - 50px);
-            color:white;
+            left: 110px;
+            color: white;
             font-weight: 800;
+            display:inline-block;
+        }
+        .location_title h1{
+            display:inline;
         }
 
 
         .card_content {
             display: flex;
             justify-content: space-around;
-           
         }
 
         .card_weatherIcon img {
             width: 150px;
         }
+       
     </style>
 </head>
 
 <body>
 
     <div class="cards">
-        <!-- <div class="card">
+       
+            <!-- <div class="card">
             <div class="card_image">
                 <img src="./image_house/landscape.webp" alt="">
                 <div class="location_title">
@@ -83,8 +89,8 @@
                 <div class="card_weatherIcon">
                     <img src="./image_house/晴時多雲.svg" alt="">
                 </div>
-            </div>
-        </div> -->
+            </div> -->
+           
     </div>
 
 
@@ -99,8 +105,9 @@
             success: function (res) {
 
                 var all_locations = res.records.location;
-                // console.log(all_locations);
-                var weather_image = ['image_house/晴時多雲.svg', 'image_house/陰天.png', 'image_house/短暫雨.png'];
+                console.log(all_locations);
+                var weather_image = ['image_house/晴天.png', 'image_house/晴時多雲.png', 'image_house/多雲.png', 'image_house/陰天.png', 'image_house/多雲短暫雨.png', 'image_house/陰短暫雨.png', 'image_house/陰有雨.png'];
+
 
                 all_locations.forEach(location => {
                     var locationName = location.locationName;
@@ -109,16 +116,28 @@
                     var MinT = location.weatherElement[2].time[0].parameter.parameterName;
                     var MaxT = location.weatherElement[4].time[0].parameter.parameterName;
                     var Wx_2 = location.weatherElement[0].time[0].parameter.parameterValue;
+                   
 
                     var Img;
                     for (let index = 0; index < Wx_2.length; index++) {
                         const oWx = Wx_2[index];
-                        if (oWx == '2') {
-                            Img = weather_image[0]; //氣候分辨代號2執行此項
-                        } else if (oWx == '5') {
+                        if (oWx == '1') {
+                            Img = weather_image[5]; //氣候分辨代號2執行此項
+                        } else if (oWx == '2') {
                             Img = weather_image[1]; //氣候分辨代號8執行此項
+                        } else if (oWx == '4') {
+                            Img = weather_image[2];
+                        } else if (oWx == '6') {
+                            Img = weather_image[2];
+                        } else if (oWx == '7') {
+                            Img = weather_image[3];
+                        } else if (oWx == '8') {
+                            Img = weather_image[4];
+                        } else if (oWx == '11') {
+                            Img = weather_image[0];
                         } else {
-                            Img = weather_image[2]; //其餘執行此項
+                            Img = weather_image[6]; //其餘執行此項
+                            
                         }
                     }
 
@@ -146,6 +165,21 @@
             }
         });
 
+        <!-- 
+    // 1_
+    // 2_晴時多雲
+    // 3多雲時晴
+    // 4_多雲
+    // 5_多雲時陰
+    // 6_陰時多雲
+    // 7_陰天
+    // 8_多雲短暫雨
+    // 9_多雲時陰短暫雨
+    // 10_
+    // 11_陰短暫雨
+    // 12_多雲時陰有雨
+    // 13_陰時多雲有雨
+    // 14_陰有雨 
 
     </script>
 </body>

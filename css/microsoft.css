@@ -365,7 +365,7 @@ h3{
 .line_img{
     position: absolute;
     top: 200px;
-    left: 340px;
+    left: 300px;
     pointer-events: none;
     transform: translateY(300px);
     transition: transform 600ms linear 0ms;
@@ -377,9 +377,7 @@ h3{
 .sphere_img{
     width: 100%;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     padding:60px 0 ;
 }
@@ -387,21 +385,150 @@ h3{
     max-width: 100%;   
 }
 .sphere_content{
-    width:100%;
+    /* width:100%; */
     background-color: rgb(25, 25, 25);
+    
 }
 .sphere_text{
     width: 384px;
-    margin: 0px 0px 50px;
-    padding: 0px 16px;
+    margin: 0px 0px 0px 750px;
+    padding: 0 16px 160px 16px;
+
+    
 }
 
 .sphere_text p{
-    margin:0;
+    margin: 0;
     color: rgb(255, 255, 255);
     font-size: 16px;
     line-height: 24px;
-    font-weight: 600
+    font-weight: 600;
+}
+.image_powerful{
+    position: relative;
+    overflow: hidden;
+    padding:100px 0;
+    
+   
+}
+.title_powerful{
+    font-size: 60px;
+    line-height: 128px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 4;
+    padding:238px 0 0 30px;
+    
 }
 
+.img_powerful{
+    opacity: 0.993143;
+    transform: scale(1.5, 1.5); 
+    
+}
+.img_powerful img{
+    width: 100%;
+}
 
+#main_cloud{
+    background-image: url('https://www.microsoft.com/design/fluent/assets/images/clouds.jpg');
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#main_cloud h2{
+    margin:0;
+}
+
+@media (max-width:1680px){
+    .diamond_cloud{
+        position: relative;
+    }
+    .diamond_solid{
+        position: absolute;
+        right:-200px;
+        top:-350px;
+        z-index:5;
+    }
+    .diamond_outline{
+        position: absolute;
+        right:-200px;
+        top:-250px;
+    }
+}
+@media (max-width:1460px){
+    .diamond_cloud{
+        display:none;
+    }
+}
+
+.title_cloud1{
+    font-size: 200px;
+    line-height: 0.8;
+    color: rgb(0, 0, 0); 
+}
+.title_cloud2{
+    font-size: 200px;
+    line-height: 0.8;
+    color: rgb(0, 0, 0);
+    display:flex;
+    justify-content: flex-end;
+}
+.line_cloud{
+    padding:39px 0 330px 370px;
+}
+
+#main_engaging{
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    min-height: 820px;
+    position: relative;
+}
+.title_engaging{
+    padding:60px 0 0 8px;
+}
+.title_engaging h2{
+    font-size: 128px;
+    line-height: 150px;
+    font-weight: 600;
+    margin: 0;
+}
+.content_engaging{
+    width: 100%;
+    margin: 60px 0px 0px;
+}
+.text_engaging{
+    width: 100%;
+    max-width: 384px;
+    padding: 0px 16px;
+}
+.text_engaging p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px;
+}
+.icons_engaging{
+    position: absolute;
+    right:0;
+    top:200px;    
+}
+.icons_engaging img{
+    max-width:50vw;
+}
+
+#main_space{
+    width: 100%;
+    min-height: 768px;
+    background-image: url('https://www.microsoft.com/design/fluent/assets/images/space.jpg');
+    background-attachment: fixed;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.fluent_image_space{
+    margin:0 0 0 340px;
+    
+}
