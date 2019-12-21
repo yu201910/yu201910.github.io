@@ -161,9 +161,22 @@
             line-height: 28px;
             font-weight:600;
         }
+        @media screen and (max-width:992px){
+            .content_text {
+                position: absolute;
+                top: 50px;
+                left:40px;
+            }
+        }
+        @media screen and (max-width:768px){
+            .content_text {
+                position: absolute;
+                top: 35px;
+                left:30px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
@@ -238,7 +251,6 @@
                             <div class="banner_button"><span>立即預購></span></div>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Add Arrows -->
@@ -261,8 +273,6 @@
                         <a href="#" class="btn ">深入了解 > </a>
                     </div>
                 </div>
-
-
                 <div class="card col-xl-3 col-md-6 col-12" style="width: 18rem;">
                     <img src="./image/card6.webp" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -319,8 +329,6 @@
                         <a href="#" class="btn ">深入了解 > </a>
                     </div>
                 </div>
-
-
                 <div class="card col-xl-3 col-md-6 col-12" style="width: 18rem;">
                     <img src="./image/card2.webp" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -348,13 +356,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
 
     <!-- swiper套件 -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>

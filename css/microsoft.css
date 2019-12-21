@@ -53,40 +53,32 @@ section{
 nav .container{
     height: 100%;
     display: flex;
-    align-items: center;
-   
-    
+    align-items: center;    
 }
 .logo img{
     width:15px;
     height:15px;
 }
-
 .link-group{
     display: flex;
     margin: 0;
     padding: 0 70px 0 120px;
     list-style: none;
-    justify-content: space-between;
-        
+    justify-content: space-between;       
 }
-
 .links{
     flex-grow: 1;
 }
 .link-group li a{
     color:white;
     font-weight: 600;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
-
 .sitetitle h1 {
     margin-left:166px;
     font-size: 16px;
     font-weight: 600;
     line-height: 49px;
-
 }
 .toggle{
     display: none;
@@ -101,15 +93,13 @@ nav .container{
     width: 24px;
     height: 2px;
     background-color: rgb(255, 255, 255);
-    transition: all 200ms linear 0ms;
-        
+    transition: all 200ms linear 0ms;       
 }
 .top-bar{
     top: 17px;
     left: 12px;
     transform: rotate(0deg);
 }
-
 .middle-bar{
     top: 24px;
     left: 12px;
@@ -131,7 +121,6 @@ nav .container{
     height: calc(100vh - 48px);
     background-color: black;
     transition: 1s;
-
 }
 .mobile-navbar.active{
     opacity: 1;
@@ -165,7 +154,6 @@ nav .container{
 #banner{
     width: 100%;
     background-color: black;
-
 }
 
 .banner_all{
@@ -190,8 +178,7 @@ nav .container{
     font-size: 16px;
     line-height: 24px;
     font-weight: 600;
-    margin: 0px 0px 24px 0;
-    
+    margin: 0px 0px 24px 0;    
 }
 .banner_img{
     width:57%;
@@ -230,71 +217,58 @@ nav .container{
     right: -50%;
     top: 0;
     background-color: rgb(95, 207, 99);
-    }
-
-
+}
 #inner a{
     display: block;
     text-decoration:none;
     color: black;
-  }
+}
 
 .icon {
     min-height: 96px;
     width: 100%;
     text-align: left;
     flex: 1 1 auto;
-    padding: 26px 26px 64px 26px;
-    
-  }
+    padding: 26px 26px 64px 26px;   
+}
 
 .icon img {
     width: 66px;
     height:66px;
 }
-    
-
 .text {
     width: 100%;
     height:180px;
     flex: 0 0 auto;
     padding: 0px 26px;
-    
-
-  }
-  .text h2 {
+}
+.text h2 {
     font-size: 32px;
     letter-spacing: -0.03rem;
     line-height: 40px;
     font-weight: 600;
-    margin: 0px 0px 26px ;
-   
-    
-  }
+    margin: 0px 0px 26px ;   
+}
 
-  .text p {
+.text p {
     font-size: 16px;
     line-height: 20px;
-    font-weight: 600;
-    
-  }
+    font-weight: 600;  
+}
 
-  .bottom {
+.bottom {
     height: 48px;
     width: 100%;
-  } 
-
-  .bottom img {
-    margin: 0px 18px 0 26px;
-    
-  }
-
+} 
+.bottom img {
+    margin: 0px 18px 0 26px;  
+}
 #inner span{
     font-family:  "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
     letter-spacing: 0.01rem;
     text-align: center;
     line-height: 48px;
- }
+}
 .platform1{
     background-color: rgb(37, 142, 222);
     width:25%;     
@@ -324,7 +298,6 @@ nav .container{
 .platform4:hover{
     background-color: rgb(80, 204, 85);
 }
-
 #main_heading{
     min-height:668px;
     background-image: url("https://www.microsoft.com/design/fluent/assets/images/msft-verge-fluent.jpg");
@@ -563,6 +536,9 @@ h3{
 
 #media_style{
     overflow: hidden;
+    padding-bottom: 160px;
+    background-color: black;
+    
 }
 .media_style_all{
     display:flex;
@@ -671,4 +647,106 @@ h3{
 .styleform2:hover svg path{
     fill:black;
 }
-        
+
+#news_style{
+    width:100%;
+    background-color: black;
+}
+.news_all{
+    width:100%;
+}
+.news_item{
+    width: 100%;
+    display: flex;
+    padding: 0px 0px 200px;
+} 
+.news_title{
+    width:50%;
+}
+.news_title h2{
+    font-size: 32px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 0px 0px 0px 16px;
+}
+.news_content{
+    width: 50%;
+    padding: 0px 16px 35px;
+}
+.news_text{
+    width:100%;
+}
+.news_text p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.news_action{
+    width: 100%;
+    margin: 70px 0px 0px;
+}
+.news_action a{
+    display: flex;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.news_action a:hover{
+    color: rgb(255, 255, 255);
+    opacity: 0.6;
+}
+
+.news_action img{
+    margin: 0px 16px 0px 0px;
+}
+.news_action span{
+    font-size: 16px;
+    letter-spacing: 0.13rem;
+    line-height: 1;
+}
+
+#footer{
+    width: 100%;
+    height: 48px;
+    background-color:black;
+}
+#footer .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_logo{
+    flex-grow: 1;
+    margin-right:68px;
+}
+.footer_nav{
+    height: 48px;
+    padding: 0px 100px 0px 0px;
+    flex-grow: 2;
+}
+.footer_nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.footer_nav ul li{
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    line-height: 48px;
+}
+.footer_nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.footer_social svg{
+    margin: 0 10px;
+    fill:white;
+}

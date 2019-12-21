@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
+            font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", sans-serif;
         }
 
         /* Banner */
@@ -51,7 +56,7 @@
         .banner {
             width: 100%;
             height: 100%;
-            position: relative;
+
         }
 
         .banner_image {
@@ -71,20 +76,20 @@
         .navbar {
             width: 100%;
             background-color: burlywood;
-            position: relative;
+
         }
 
         .navbar .fixedattop {
             position: fixed;
             top: 0px;
-            z-index: 10;
+
         }
 
         .navbar_all {
             width: 100%;
             display: flex;
             justify-content: space-between;
-
+            
         }
 
         .navbar_logo {
@@ -102,7 +107,7 @@
 
         .navbar_all ul li a {
             text-decoration: none;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", sans-serif;
             font-weight: 600;
             font-size: 20px;
             color: black;
@@ -167,7 +172,7 @@
         }
 
         .classification_image {
-            width: 30%;
+            width: 10%;
         }
 
         /* 組合方案 */
@@ -230,6 +235,14 @@
             font-size: 19px;
 
         }
+
+        .navbar-toggler-icon {
+            
+        }
+        /* .navbar-toggler{
+        background-color: black;
+                
+        } */
     </style>
 </head>
 
@@ -239,12 +252,12 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img class="banner_image" src="./image/banner/首頁.jpg" alt="">
-                    <ul class="banner_button btn btn-outline-dark">
+                    <ul class="banner_button btn btn-outline-dark border-light">
                         <li><a href="#about">開始探索</a>
                     </ul>
                 </div>
-                <div class="swiper-slide"><img class="banner_image" src="./image/banner/首頁2.PNG" alt=""></div>
-                <div class="swiper-slide"><img class="banner_image" src="./image/banner/關於2.PNG" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="" alt=""></div>
             </div>
 
             <!-- Add Arrows -->
@@ -256,27 +269,32 @@
     </div>
 
     <nav>
-        <div class="navbar">
+        <div class="navbar navbar-expand-lg navbar-light ">
             <div class="navbar_all">
-                <div class="navbar_logo">
+                <div class="navbar_logo d-none d-lg-block d-xl-block">
                     <img src="./image/logo.PNG" alt="">
                 </div>
-                <div class="navbar_linkMain">
-                    <ul class="links1">
-                        <li><a href="">首頁</a>
-                        <li><a href="#about">關於興趣箱</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar_linkMain collapse navbar-collapse " id="navbarToggleExternalContent">
+                    <ul class="links1 navbar-nav ">
+                        <li class="mx-lg-4"><a href="">首頁</a>
+                        <li class="mx-lg-4"><a href="#about">關於興趣箱</a>
                             <!-- <ul>
                                     <li><a data-scroll href=>興趣箱簡介</a></li>
                                     <li><a data-scroll href=>使命</a></li>
                                 </ul> -->
-                        </li>
-                        <li><a href="">立即訂閱</a></li>
-                        <li><a href="">歷史查詢</a></li>
-                        <li><a href="">聯絡我們</a></li>
+                        </li >
+                        <li class="mx-lg-4"><a href="">立即訂閱</a></li>
+                        <li class="mx-lg-4"><a href="">歷史查詢</a></li>
+                        <li class="mx-lg-4"><a href="">聯絡我們</a></li>
                     </ul>
                 </div>
-                <div class="navbar_linkSecondary">
-                    <ul class="links2">
+                <div class="navbar_linkSecondary collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
+                    <ul class="links2 navbar-nav">
                         <li><a href=""> <img src="./image/account.png" alt="">會員</a></li>
                         <li><a href=""><img src="./image/shopping-cart-black-shape.png" alt="">購物車</a></li>
                     </ul>
@@ -290,7 +308,7 @@
             <h3>關於興趣箱</h3>
         </div>
         <div class="about_subtitle">
-            <h4>興趣箱是什麼 ?</h4>
+            <h4>❖興趣箱是什麼 ?</h4>
         </div>
         <div class="about_content row">
             <div class="about_images col-xl-7">
@@ -335,22 +353,22 @@
     <div class="classification">
         <div class="container">
             <div class="about_subtitle">
-                <h4> 興趣箱裡有什麼?</h4>
+                <h4> ❖興趣箱裡有什麼?</h4>
             </div>
-            <div class="classification_content row">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/配飾.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/食品.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/植栽.jpg" alt="">
+            <div class="classification_content row ">
+                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/配飾.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/食品.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/植栽.jpg" alt="">
             </div>
-            <div class="classification_content row">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/木製.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/著色.jpeg" alt="">
+            <div class="classification_content row ">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/木製.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/蠟燭.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/著色.jpeg" alt="">
             </div>
-            <div class="classification_content row">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/黏土.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/紙藝.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-4 col-12" src="./image/類型/皮革.jpg" alt="">
+            <div class="classification_content row ">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/黏土.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/紙藝.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/皮革.jpg" alt="">
             </div>
         </div>
     </div>
