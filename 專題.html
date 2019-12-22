@@ -273,13 +273,26 @@
             margin: 0px 50px;
             display: inline-block;
         }
+        .modal-title{
+            color:black;
+            font-weight: 600;
+        }
+        .modal-body h5{
+            color:black;
+            font-weight: 600; 
+        }
+        .modal-body p{
+            color:black;
+        }
 
         .contact_detail_title {
             background-color: black;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 17px;
             margin: 30px 50px 0px 50px;
             display: inline-block;
+            border-radius: 0.2rem;
+            font-size: 20px;
         }
 
         .contact_content {
@@ -319,42 +332,49 @@
         }
 
         /* 本月主題 */
-        .theme_all{
-            display:flex;
-            padding:50px;
+        .theme_all {
+            display: flex;
+            padding: 50px;
             background-color: gray;
         }
-        .theme_image{
-            width:70%;
+
+        .theme_image {
+            width: 70%;
         }
-        .theme_image img{
-            width:100%;
+
+        .theme_image img {
+            width: 100%;
         }
-        .theme_content{
-            width:30%;
+
+        .theme_content {
+            width: 30%;
             background-color: black;
-            opacity: 0.85;  
+            opacity: 0.85;
         }
-        .theme_title{
+
+        .theme_title {
             text-align: center;
-            color:white;
+            color: white;
         }
-        .theme_title h2{
-            margin:10px;
+
+        .theme_title h2 {
+            margin: 10px;
 
         }
-        .theme_text{
-            color:white;
+
+        .theme_text {
+            color: white;
             font-size: 25px;
-            margin: 75px 30px 0px ;
+            margin: 75px 30px 0px;
         }
-        .theme_text p{
-            margin:90px 0;
-        }
-        .theme_content button{
-         margin-left:140px;
-        }     
 
+        .theme_text p {
+            margin: 90px 0;
+        }
+
+        .theme_content button {
+            margin-left: calc(50% - 47px);
+        }
     </style>
 </head>
 
@@ -633,10 +653,42 @@
                 </form>
             </div>
             <div class="contact_detail">
-                <div class="contact_question"><button type="button" class="btn btn-dark" data-toggle="modal"
-                        data-target="#exampleModalLong">
+                <div class="contact_question">
+                    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal">
                         常見問題
-                    </button></div>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">常見問題</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5> Q1.我的興趣箱什麼時候到達？</h5>
+                                    <p> ANS.我們每一個月5日左右發貨，並需要1-3天的發貨時間。</p>
+                                    <h5> Q2.我未收到興趣箱怎麼辦?</h5>
+                                    <p>  ANS.請立即通過信箱與我們聯繫。</p>
+                                    <h5> Q3.我的訂閱會自動續訂嗎？</h5>
+                                    <p>  ANS.不會自動續訂，但您將收到一封電子郵件，提醒您進行續訂。</p>
+                                    <h5>  Q4.您在國際上運送嗎？</h5>
+                                    <p> ANS.是，國際訂單的統一費用為15美元。裝箱後會寄出USPS，然後由海關處理後再寄給您當地的郵政服務。</p>
+                                    <h5>  Q5.如何退貨?</h5>
+                                    <p> ANS.若材料包有重大瑕疵或者是缺件，請立即填寫留言表單與我們聯繫，會有專人為您服務。</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="contact_information">
                     <div class="contact_detail_title">聯絡資訊</div>
                     <div class="contact_content">
@@ -666,12 +718,14 @@
         <div class="theme_all">
             <div class="theme_image"><img src="./個人專題/image/OAIGQU0.jpg" alt=""></div>
             <div class="theme_content">
-                <div class="theme_title"><h2>本月主題</h2></div>
+                <div class="theme_title">
+                    <h2>本月主題</h2>
+                </div>
                 <div class="theme_text">
                     <p>隨著<br>次日清晨的一縷陽光<br>煙飛灰滅</p>
-                    <p>留下一場冬日美夢</p>
+                    <p>留下一場冬日美夢......</p>
                 </div>
-                <button type="button" class="btn btn-light">猜箱去</button>
+                <button type="button" class="btn btn-light  btn-lg">猜箱去</button>
             </div>
         </div>
     </div>
@@ -688,6 +742,17 @@
 
     <!-- js CDN -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
 
     <!-- Initialize Swiper -->
     <script>

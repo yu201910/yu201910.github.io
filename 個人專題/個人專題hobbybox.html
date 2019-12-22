@@ -22,6 +22,7 @@
             margin: 0;
             padding: 0;
             font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", sans-serif;
+            background-color: #CEC8BC;
         }
 
         /* Banner */
@@ -75,7 +76,7 @@
         /* Navbar */
         .navbar {
             width: 100%;
-            background-color: burlywood;
+            background-color: #938075;
 
         }
 
@@ -89,7 +90,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            
+
         }
 
         .navbar_logo {
@@ -142,20 +143,73 @@
         }
 
         /* about */
+        #about {
+            background-color: #CEC8BC;
+        }
+
         .title h3 {
             margin: 0;
             padding: 0;
             text-align: center;
             font-weight: 600;
             margin: 30px 0;
-
         }
 
         .about_subtitle h4 {
             margin: 0;
             padding: 0;
             text-align: center;
-            margin: 10px 0;
+            margin: 20px 0;
+        }
+
+        .about_content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about_images {
+            padding: 0;
+        }
+
+        .about_image_group1 {
+            margin: 0 0 15px 0;
+        }
+
+        .about_image_group1 img {
+            width: 40%;
+            margin: 0 15px 0 0px;
+        }
+
+        .about_image_group2 img {
+            width: 80%;
+            box-shadow: #938075 20px 20px;
+        }
+
+        .about_text1 {
+            margin: 0 0 42px 0;
+        }
+
+        .about_text2 {
+            margin: 0 0 42px 0;
+        }
+
+        .about_text_title {
+            border-radius: 10rem;
+            background-color: #938075;
+            text-align: center;
+            padding: 17px;
+            margin-bottom: 20px;
+            
+        }
+
+        .about_text_title h5 {
+            font-size: 25px;
+            margin: 0px;
+            font-weight:600;
+        }
+
+        .about_text_content {
+            font-size: 19px;
 
         }
 
@@ -175,74 +229,221 @@
             width: 10%;
         }
 
+        /* 使命 */
+        #misson {
+            height: 250px;
+            padding-top: 30px;
+            background-image: url('http://static1.squarespace.com/static/5866ffbad2b857fd0d13208e/5880f1f005b03728fdaf0c16/5cd42c54419202b37b3f3d82/1571923139618/andrian-valeanu-82531-unsplash+%281%29.jpg?format=1500w');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+        }
+
+        .misson_all {
+            width: 93%;
+            background-color: transparent;
+            padding: 0px 0px 40px 0px;
+            margin: 0 auto;
+            border: white solid 3px;
+        }
+
+        .misson_title h2 {
+            text-align: center;
+            color: white;
+            margin: 30px 0 30px 0;
+            font-size: 35px;
+        }
+
+        .misson_content {
+            text-align: center;
+            color: white;
+        }
+
+        .misson_content p {
+            font-size: 23px;
+        }
+
+        /* 本月主題 */
+        .theme_all {
+            display: flex;
+            padding: 50px;
+            background-color: #CEC8BC
+        }
+
+        .theme_image {
+            width: 70%;
+        }
+
+        .theme_image img {
+            width: 100%;
+        }
+
+        .theme_content {
+            width: 30%;
+            background-color: black;
+            opacity: 0.85;
+        }
+
+        .theme_title {
+            text-align: center;
+            color: white;
+        }
+
+        .theme_title h2 {
+            margin: 30px;
+            font-size: 35px;
+
+        }
+
+        .theme_text {
+            color: white;
+            font-size: 25px;
+            margin: -8px 63px 0px;
+        }
+
+        .theme_text p {
+            margin: 90px 0;
+        }
+
+        .theme_content button {
+            margin-left: calc(50% - 47px);
+        }
+
+        /* 歷史查詢 */
+        .form {
+            height: 200px;
+            background-color: black;
+            opacity: 0.8;
+            position: relative;
+        }
+
+        .form_title h2 {
+            color: white;
+            font-size: 35px;
+            font-weight: 600;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .form_image {
+            position: absolute;
+            top: 22px;
+            left: 40px;
+        }
+        .form_image2 {
+            position: absolute;
+            top: 22px;
+            right:40px;
+        }
+
+        .form .btn {
+            height: 38px;
+        }
+
         /* 組合方案 */
 
-        /* .subscription {
-            background-color: #d8d8cf;
+        .subscription {
+            background-image: url("./image/方案訂閱/訂閱背景2-05.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             padding-bottom: 50px;
         }
 
         .subscription_all {
-            width: 90%;
-            margin: 0 auto;
-        } */
-
-
-        .about_content {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .about_context {
-            width: 60%;
-        }
-
-        .about_images {
             width: 100%;
-            padding: 0 0 0 50px;
+            margin: 0 auto;
         }
 
-        .about_image_group1 {
-            margin: 0 0 15px 0;
-        }
-
-        .about_image_group1 img {
-            width: 40%;
-            margin: 0 15px 0 0px;
-        }
-
-        .about_image_group2 img {
-            width: 80%;
-            box-shadow: dimgray 20px 20px;
-        }
-
-        .about_text1 {
-            margin: 0 0 60px 0;
-        }
-
-        .about_text2 {
-            margin: 0 0 60px 0;
-        }
-
-        .about_text_title {
-            border-radius: 10rem;
-            background-color: sienna;
+        .subscription_title h2 {
+            color:black;
+            font-size: 35px;
+            font-weight: 600;
             text-align: center;
-            padding: 17px;
+            padding: 30px;
         }
-
-        .about_text_content {
-            font-size: 19px;
-
-        }
-
-        .navbar-toggler-icon {
+        .subscription_content .card{
+            padding:0px;
+            margin: 0 15px;
             
         }
-        /* .navbar-toggler{
-        background-color: black;
-                
-        } */
+        .card-body{
+            text-align: center;
+        }
+        .card-title{
+            font-weight: 600;
+        }
+
+
+        /* 留言表單 */
+        #contact {
+            background-color: #CEC8BC;
+        }
+
+        #contact .container {
+            display: flex;
+        }
+
+        .contact_all_title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 50px;
+
+        }
+
+        .contact_form {
+            width: 50%;
+            background-color: #938075;
+            padding: 20px;
+            margin-bottom: 50px;
+            box-shadow: gray 3px 3px;
+        }
+
+        .contact_title h2 {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            padding: 23px;
+        }
+
+        .contact_detail {
+            width: 50%;
+        }
+
+        .contact_question {
+            color: white;
+            margin: 0px 50px;
+            display: inline-block;
+        }
+
+        .modal-title {
+            color: black;
+            font-weight: 600;
+        }
+
+        .modal-body h5 {
+            color: black;
+            font-weight: 600;
+        }
+
+        .modal-body p {
+            color: black;
+        }
+
+        .contact_detail_title {
+            background-color: black;
+            color: white;
+            padding: 10px 17px;
+            margin: 30px 50px 0px 50px;
+            display: inline-block;
+            border-radius: 0.2rem;
+            font-size: 20px;
+        }
+
+        .contact_content {
+            margin: 30px 50px;
+        }
     </style>
 </head>
 
@@ -287,13 +488,14 @@
                                     <li><a data-scroll href=>興趣箱簡介</a></li>
                                     <li><a data-scroll href=>使命</a></li>
                                 </ul> -->
-                        </li >
+                        </li>
                         <li class="mx-lg-4"><a href="">立即訂閱</a></li>
                         <li class="mx-lg-4"><a href="">歷史查詢</a></li>
                         <li class="mx-lg-4"><a href="">聯絡我們</a></li>
                     </ul>
                 </div>
-                <div class="navbar_linkSecondary collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
+                <div class="navbar_linkSecondary collapse navbar-collapse justify-content-end"
+                    id="navbarToggleExternalContent">
                     <ul class="links2 navbar-nav">
                         <li><a href=""> <img src="./image/account.png" alt="">會員</a></li>
                         <li><a href=""><img src="./image/shopping-cart-black-shape.png" alt="">購物車</a></li>
@@ -311,7 +513,7 @@
             <h4>❖興趣箱是什麼 ?</h4>
         </div>
         <div class="about_content row">
-            <div class="about_images col-xl-7">
+            <div class="about_images col-xl-6">
                 <div class="about_image_group1">
                     <img src="./image/熱銷10/香水.jpg" alt="">
                     <img src="./image/熱銷10/手工筆記本裝訂套件.jpg" alt="">
@@ -320,7 +522,7 @@
                     <img src="./image/banner/IMG_4439.jpg" alt="">
                 </div>
             </div>
-            <div class="about_context col-xl-5">
+            <div class="about_context col-xl-6">
                 <div class="about_text1">
                     <div class="about_text_title">
                         <h5>為您尋找獨特的材料</h5>
@@ -349,120 +551,225 @@
         </div>
     </div>
 
-
     <div class="classification">
         <div class="container">
             <div class="about_subtitle">
                 <h4> ❖興趣箱裡有什麼?</h4>
             </div>
-            <div class="classification_content row ">
-                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/配飾.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/食品.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12 " src="./image/類型/植栽.jpg" alt="">
+            <div class="classification_content row  justify-content-md-center">
+                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/配飾.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/食品.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/植栽.jpg" alt="">
             </div>
-            <div class="classification_content row ">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/木製.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/蠟燭.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/著色.jpeg" alt="">
+            <div class="classification_content row justify-content-md-center">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/木製.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/蠟燭.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/著色.jpeg" alt="">
             </div>
-            <div class="classification_content row ">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/黏土.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/紙藝.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-4 col-12" src="./image/類型/皮革.jpg" alt="">
+            <div class="classification_content row justify-content-md-center">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/黏土.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/紙藝.jpg" alt="">
+                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/皮革.jpg" alt="">
             </div>
         </div>
     </div>
 
-
-
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        關於興趣箱
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item  cdropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        立即訂閱
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">訂閱方案</a>
-                        <a class="dropdown-item" href="#">個別購買</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-loggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        教學說明
-                    </a>ink dropdown-t
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">影音指導</a>
-                        <a class="dropdown-item" href="#">照片作品分享</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">聯絡我們</a>
-                </li>
-            </ul>
+    <div id="misson">
+        <div class="misson_all ">
+            <div class="container">
+                <div class="misson_title">
+                    <h2>我們的使命</h2>
+                </div>
+                <div class="misson_content">
+                    <p>透過我們精心挑選的材料和簡單的說明手冊，協助訂閱者開發新的興趣，讓您在探索自己的路上樂趣滿載。</p>
+                </div>
+            </div>
         </div>
-    </nav> -->
+    </div>
 
+    <div id="theme">
+        <div class="theme_all ">
+            <div class="theme_image"><img src="./image/OAIGQU0.jpg" alt=""></div>
+            <div class="theme_content">
+                <div class="theme_title">
+                    <h2>本月主題</h2>
+                </div>
+                <div class="theme_text">
+                    <p>隨著<br>次日清晨的一縷陽光<br>煙飛灰滅</p>
+                    <p>留下一場冬日美夢......</p>
+                </div>
+                <button type="button" class="btn btn-light  btn-lg">猜箱去</button>
+            </div>
+        </div>
+    </div>
 
+    <div class="form">
+        <div class="container">
+            <div class="form_title ">
+                <h2>歷史查詢</h2>
+            </div>
+            <form>
+                <div class="form-row justify-content-lg-center">
+                    <div class="col-lg-2  ">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Year</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Month</option>
+                                <option>JANUARY</option>
+                                <option>FEBRUARY</option>
+                                <option>MARCH</option>
+                                <option>APRIL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary col-lg-1 ">
+                        <img src="./image/searching-magnifying-glass24.png" alt=""> &nbsp搜尋</button>
+                </div>
+            </form>
+            <div class="form_image ">
+                <img width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢icon-02.png" alt="">
+            </div>
+            <div class="form_image2 ">
+                <img width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
+        </div>
+    </div>
 
-    <!-- <div class="subscription">
+    <div class="subscription">
         <div class="container">
             <div class="subscription_all">
-                <div class="title">
+                <div class="subscription_title">
                     <h2> 訂閱方案</h2>
                 </div>
-                <div class="subscription_content row">
-                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
-                        <img src="./02-素材/方案訂閱/1月.PNG" class="card-img-top" alt="...">
-                        <div class="card-body">
+                <div class="subscription_content row justify-content-xl-center justify-content-md-center">
+                    <div class="card col-xl-3 col-md-3 col-12 " style="width: 18rem;">
+                        <img src="./image/方案訂閱/1月.PNG" class="card-img-top" alt="...">
+                        <div class="card-body  ">
                             <h5 class="card-title">1個月方案</h5>
-                            <p class="card-text">$150/月</p>
-                            <a href="#" class="btn  btn-dark ">立即訂閱 </a>
+                            <p class="card-text">$300/月</p>
+                            <a href="#" class="btn btn-dark ">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
-                        <img src="./02-素材/方案訂閱/3月.PNG" class="card-img-top" alt="...">
+                    <div class="card col-xl-3 col-md-3 col-12" style="width: 18rem;">
+                        <img src="./image/方案訂閱/3月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">3個月方案</h5>
-                            <p class="card-text">$440/月</p>
-                            <a href="#" class="btn  btn-dark">立即訂閱 </a>
+                            <p class="card-text">$810/3月</p>
+                            <a href="#" class="btn btn-dark">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-4 col-md-4 col-12" style="width: 18rem;">
-                        <img src="./02-素材/方案訂閱/6月.PNG" class="card-img-top" alt="...">
+                    <div class="card col-xl-3 col-md-3 col-12" style="width: 18rem;">
+                        <img src="./image/方案訂閱/6月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">6個月方案</h5>
-                            <p class="card-text">$870/月</p>
+                            <p class="card-text">$1440/6月</p>
                             <a href="#" class="btn btn-dark ">立即訂閱 </a>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div> -->
+    </div>
+
+    <div id="contact">
+        <div class="contact_all_title">
+            <h2>聯絡我們</h2>
+        </div>
+        <div class="container">
+            <div class="contact_form">
+                <div class="contact_title">
+                    <h2>聯絡我們</h2>
+                </div>
+                <form>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-3 col-form-label">姓名</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-3 col-form-label">電話</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">留言內容</label>
+                        <div class="col-sm-9"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="請輸入文字"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
+                        <input type="file" class="form-control-file col-sm-9 " id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-9 ">
+                            <button type="submit" class="btn btn-dark style=">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact_detail">
+                <div class="contact_question">
+                    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal">
+                        常見問題
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">常見問題</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5> Q1.我的興趣箱什麼時候到達？</h5>
+                                    <p> ANS.我們每一個月5日左右發貨，並需要1-3天的發貨時間。</p>
+                                    <h5> Q2.我未收到興趣箱怎麼辦?</h5>
+                                    <p> ANS.請立即通過信箱與我們聯繫。</p>
+                                    <h5> Q3.我的訂閱會自動續訂嗎？</h5>
+                                    <p> ANS.不會自動續訂，但您將收到一封電子郵件，提醒您進行續訂。</p>
+                                    <h5> Q4.您在國際上運送嗎？</h5>
+                                    <p> ANS.是，國際訂單的統一費用為15美元。裝箱後會寄出USPS，然後由海關處理後再寄給您當地的郵政服務。</p>
+                                    <h5> Q5.如何退貨?</h5>
+                                    <p> ANS.若材料包有重大瑕疵或者是缺件，請立即填寫留言表單與我們聯繫，會有專人為您服務。</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_information">
+                    <div class="contact_detail_title">聯絡資訊</div>
+                    <div class="contact_content">
+                        <p>服務時間:9:00~17:00</p>
+                        <p>電話:00-12345678</p>
+                        <p>信箱:hobbyboxtw@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
