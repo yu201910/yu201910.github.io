@@ -233,18 +233,57 @@
         }
 
         /* 留言表單 */
+        #contact {
+            background-color: darkgray;
+        }
+
+        #contact .container {
+            display: flex;
+        }
+
+        .contact_all_title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+            padding: 50px;
+
+        }
+
         .contact_form {
             width: 50%;
             background-color: burlywood;
             padding: 20px;
+            margin-bottom: 50px;
             box-shadow: gray 3px 3px;
         }
-        .contact_title h2{
+
+        .contact_title h2 {
             font-size: 25px;
             font-weight: 600;
             text-align: center;
             padding: 23px;
+        }
 
+        .contact_detail {
+            width: 50%;
+        }
+
+        .contact_question {
+            color: white;
+            margin: 0px 50px;
+            display: inline-block;
+        }
+
+        .contact_detail_title {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            margin: 30px 50px 0px 50px;
+            display: inline-block;
+        }
+
+        .contact_content {
+            margin: 30px 50px;
         }
     </style>
 </head>
@@ -477,48 +516,66 @@
     </div>
 
     <div id="contact">
+        <div class="contact_all_title">
+            <h2>聯絡我們</h2>
+        </div>
         <div class="container">
+
             <div class="contact_form">
                 <div class="contact_title">
                     <h2>聯絡我們</h2>
                 </div>
-            <form>
-                <div class="form-group row">
-                    <label for="inputName" class="col-sm-3 col-form-label">姓名</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputName" placeholder="Name">
+                <form>
+                    <div class="form-group row">
+                        <label for="inputName" class="col-sm-3 col-form-label">姓名</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputPhone" class="col-sm-3 col-form-label">電話</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                    <div class="form-group row">
+                        <label for="inputPhone" class="col-sm-3 col-form-label">電話</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">留言內容</label>
-                    <div class="col-sm-9"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="請輸入文字"></textarea>
-                    </div>
+                    <div class="form-group row">
+                        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">留言內容</label>
+                        <div class="col-sm-9"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="請輸入文字"></textarea>
+                        </div>
 
-                </div>
-                <div class="form-group row">
-                    <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
-                    <input type="file" class="form-control-file col-sm-9 " id="exampleFormControlFile1">
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-9 ">
-                        <button type="submit" class="btn btn-dark style=" >Send</button>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
+                        <input type="file" class="form-control-file col-sm-9 " id="exampleFormControlFile1">
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-9 ">
+                            <button type="submit" class="btn btn-dark style=">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact_detail">
+                <div class="contact_question"><button type="button" class="btn btn-dark" data-toggle="modal"
+                        data-target="#exampleModalLong">
+                        常見問題
+                    </button></div>
+                <div class="contact_information">
+                    <div class="contact_detail_title">聯絡資訊</div>
+                    <div class="contact_content">
+                        <p>服務時間:9:00~17:00</p>
+                        <p>電話:00-12345678</p>
+                        <p>信箱:hobbyboxtw@gmail.com</p>
                     </div>
                 </div>
             </div>
-            </form>
         </div>
     </div>
 
