@@ -17,6 +17,9 @@
         * {
             box-sizing: border-box;
         }
+        html{
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
@@ -43,15 +46,17 @@
         .banner_button {
             position: absolute;
             bottom: 50px;
+            transition: all 0.2s linear;    
         }
 
         .banner_button li {
             list-style-type: none;
+            
         }
 
         .banner_button li a {
             text-decoration: none;
-            color: white;
+            color: white;     
         }
 
         .banner {
@@ -224,9 +229,8 @@
             text-align: center;
             padding: 50px;
         }
-
-        .classification_image {
-            width: 10%;
+        .classification .container{
+            max-width: 1000px;
         }
 
         /* 使命 */
@@ -397,7 +401,7 @@
             background-color: #938075;
             padding: 20px;
             margin-bottom: 50px;
-            box-shadow: gray 3px 3px;
+            box-shadow: 0 0 30px black;
         }
 
         .contact_title h2 {
@@ -444,6 +448,8 @@
         .contact_content {
             margin: 30px 50px;
         }
+     
+
     </style>
 </head>
 
@@ -489,9 +495,9 @@
                                     <li><a data-scroll href=>使命</a></li>
                                 </ul> -->
                         </li>
-                        <li class="mx-lg-4"><a href="">立即訂閱</a></li>
-                        <li class="mx-lg-4"><a href="">歷史查詢</a></li>
-                        <li class="mx-lg-4"><a href="">聯絡我們</a></li>
+                        <li class="mx-lg-4"><a href="#subscription">立即訂閱</a></li>
+                        <li class="mx-lg-4"><a href="#form">歷史查詢</a></li>
+                        <li class="mx-lg-4"><a href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
                 <div class="navbar_linkSecondary collapse navbar-collapse justify-content-end"
@@ -551,7 +557,7 @@
         </div>
     </div>
 
-    <div class="classification">
+    <div  id="classification" class="classification">
         <div class="container">
             <div class="about_subtitle">
                 <h4> ❖興趣箱裡有什麼?</h4>
@@ -595,7 +601,7 @@
                     <h2>本月主題</h2>
                 </div>
                 <div class="theme_text">
-                    <p>隨著<br>次日清晨的一縷陽光<br>煙飛灰滅</p>
+                    <p>隨著<br>次日清晨的一縷陽光<br>灰飛煙滅</p>
                     <p>留下一場冬日美夢......</p>
                 </div>
                 <button type="button" class="btn btn-light  btn-lg">猜箱去</button>
@@ -603,7 +609,7 @@
         </div>
     </div>
 
-    <div class="form">
+    <div id="form" class="form">
         <div class="container">
             <div class="form_title ">
                 <h2>歷史查詢</h2>
@@ -642,7 +648,7 @@
         </div>
     </div>
 
-    <div class="subscription">
+    <div id="subscription" class="subscription">
         <div class="container">
             <div class="subscription_all">
                 <div class="subscription_title">
@@ -717,9 +723,9 @@
                         <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
                         <input type="file" class="form-control-file col-sm-9 " id="exampleFormControlFile1">
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-9 ">
-                            <button type="submit" class="btn btn-dark style=">Send</button>
+                    <div class="form-group row justify-content-xl-center justify-content-md-center ">
+                        <div class="col-sm-3 ">
+                            <button type="submit" class="btn btn-dark  ">Send</button>
                         </div>
                     </div>
                 </form>
@@ -767,9 +773,20 @@
                         <p>信箱:hobbyboxtw@gmail.com</p>
                     </div>
                 </div>
+                <div class="contact_images">
+                    <img src="./image/contact-02.png" alt="">
+                </div>
             </div>
         </div>
     </div>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="social_icons">
+                
+            </div>
+        </div>
+    </footer>
 
 
 
@@ -805,18 +822,18 @@
         });
 
 
-        $(document).scroll(function () {
-            var documentScrollTop = $(document).scrollTop();
-            if (documentScrollTop > $('.banner').height()) {
-                $('.navbar').addClass('fixedattop');
-                var shiftContent = $('.navbar').height();
-                $('#about').css('margin-top', shiftContent + 'px');
-            }
-            else if ($('.navbar').hasClass('fixedattop')) {
-                $('.navbar').removeClass('fixedattop');
-                $('#about').css('margin-top', '0px');
-            }
-        });
+        // $(document).scroll(function () {
+        //     var documentScrollTop = $(document).scrollTop();
+        //     if (documentScrollTop > $('.banner').height()) {
+        //         $('.navbar').addClass('fixedattop');
+        //         var shiftContent = $('.navbar').height();
+        //         $('#about').css('margin-top', shiftContent + 'px');
+        //     }
+        //     else if ($('.navbar').hasClass('fixedattop')) {
+        //         $('.navbar').removeClass('fixedattop');
+        //         $('#about').css('margin-top', '0px');
+        //     }
+        // });
 
     </script>
 
