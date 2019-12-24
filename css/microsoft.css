@@ -413,6 +413,22 @@ h3{
 #main_cloud h2{
     margin:0;
 }
+@media (max-width:1920px){
+    .diamond_cloud{
+        position: relative;
+    }
+    .diamond_solid{
+        position: absolute;
+        right:-200px;
+        top:-350px;
+        z-index:5;
+    }
+    .diamond_outline{
+        position: absolute;
+        right:-200px;
+        top:-250px;
+    }
+}
 
 @media (max-width:1680px){
     .diamond_cloud{

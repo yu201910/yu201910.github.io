@@ -11,13 +11,14 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
 
     <style>
         * {
             box-sizing: border-box;
         }
-        html{
+
+        html {
             scroll-behavior: smooth;
         }
 
@@ -46,17 +47,17 @@
         .banner_button {
             position: absolute;
             bottom: 50px;
-            transition: all 0.2s linear;    
+            transition: all 0.2s linear;
         }
 
         .banner_button li {
             list-style-type: none;
-            
+
         }
 
         .banner_button li a {
             text-decoration: none;
-            color: white;     
+            color: white;
         }
 
         .banner {
@@ -204,13 +205,13 @@
             text-align: center;
             padding: 17px;
             margin-bottom: 20px;
-            
+
         }
 
         .about_text_title h5 {
             font-size: 25px;
             margin: 0px;
-            font-weight:600;
+            font-weight: 600;
         }
 
         .about_text_content {
@@ -229,7 +230,8 @@
             text-align: center;
             padding: 50px;
         }
-        .classification .container{
+
+        .classification .container {
             max-width: 1000px;
         }
 
@@ -334,10 +336,11 @@
             top: 22px;
             left: 40px;
         }
+
         .form_image2 {
             position: absolute;
             top: 22px;
-            right:40px;
+            right: 40px;
         }
 
         .form .btn {
@@ -360,21 +363,24 @@
         }
 
         .subscription_title h2 {
-            color:black;
+            color: black;
             font-size: 35px;
             font-weight: 600;
             text-align: center;
             padding: 30px;
         }
-        .subscription_content .card{
-            padding:0px;
+
+        .subscription_content .card {
+            padding: 0px;
             margin: 0 15px;
-            
+
         }
-        .card-body{
+
+        .card-body {
             text-align: center;
         }
-        .card-title{
+
+        .card-title {
             font-weight: 600;
         }
 
@@ -390,7 +396,7 @@
 
         .contact_all_title {
             text-align: center;
-            font-size: 25px;
+            font-size: 35px;
             font-weight: 600;
             padding: 50px;
 
@@ -448,8 +454,38 @@
         .contact_content {
             margin: 30px 50px;
         }
-     
 
+        /* footer */
+        #footer {
+            background-color: #938075;
+        }
+
+        .social_title {
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+            padding: 25px;
+
+        }
+
+        .social_icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .copyright {
+            text-align: center;
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            color: white;
+        }
+
+        .copyright p {
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -463,8 +499,17 @@
                         <li><a href="#about">開始探索</a>
                     </ul>
                 </div>
-                <div class="swiper-slide"><img class="banner_image" src="" alt=""></div>
-                <div class="swiper-slide"><img class="banner_image" src="" alt=""></div>
+                <div class="swiper-slide"><img class="banner_image" src="./image/banner/C4WcRQeVMAENLna.jpg" alt="">
+                    <ul class="banner_button btn btn-outline-dark border-light">
+                        <li><a href="#about">開始探索</a>
+                    </ul>
+                </div>
+                <div class="swiper-slide"><img class="banner_image"
+                        src="./image/banner/20861899_1475762212482171_1766205133724260022_o.jpg" alt="">
+                    <ul class="banner_button btn btn-outline-dark border-light">
+                        <li><a href="#about">開始探索</a>
+                    </ul>
+                </div>
             </div>
 
             <!-- Add Arrows -->
@@ -557,7 +602,7 @@
         </div>
     </div>
 
-    <div  id="classification" class="classification">
+    <div id="classification" class="classification">
         <div class="container">
             <div class="about_subtitle">
                 <h4> ❖興趣箱裡有什麼?</h4>
@@ -782,8 +827,26 @@
 
     <footer id="footer">
         <div class="container">
+            <div class="social_title">Follow us</div>
             <div class="social_icons">
-                
+                <div class="social_FB">
+                    <a href=""><img src="./image/social-icons/fb-11.png" alt=""></a>
+                </div>
+                <div class="social_IG">
+                    <a href=""><img src="./image/social-icons/ig-09.png" alt=""></a>
+                </div>
+                <div class="social_TOUTUBE">
+                    <a href=""><img src="./image/social-icons/YT-08.png" alt=""></a>
+                </div>
+                <div class="social_Twitter">
+                    <a href=""><img src="./image/social-icons/twitter-07.png" alt=""></a>
+                </div>
+                <div class="social_pinterest"><a href="">
+                        <img src="./image/social-icons/pt-10.png" alt=""></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>版權聲明©2019本網站純屬課程練習，圖片為hobbyinthebox所有</p>
             </div>
         </div>
     </footer>
@@ -794,7 +857,7 @@
 
 
     <!-- js swiper CDN -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
