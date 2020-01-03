@@ -148,6 +148,7 @@
             margin: 0 5px;
         }
 
+
         /* about */
         #about {
             background-color: #CEC8BC;
@@ -486,6 +487,60 @@
         .copyright p {
             margin: 0;
         }
+
+        @media (max-width: 414px) {
+        
+        #contact .container {
+            display: block;
+        }
+
+        .contact_form {
+            width: 100%;
+        }
+
+        .contact_detail {
+            width: 100%;
+        }
+
+        .contact_question {
+            color: white;
+            margin: 0px 50px;
+            display: inline-block;
+        }
+
+        .modal-title {
+            color: black;
+            font-weight: 600;
+        }
+
+        .modal-body h5 {
+            color: black;
+            font-weight: 600;
+        }
+
+        .modal-body p {
+            color: black;
+        }
+
+        .contact_detail_title {
+            background-color: black;
+            color: white;
+            padding: 10px 17px;
+            margin: 30px 50px 0px 50px;
+            display: inline-block;
+            border-radius: 0.2rem;
+            font-size: 20px;
+        }
+
+        .contact_content {
+            margin: 30px 50px;
+        }
+
+        .contact_images img{
+            width:400px;
+        }
+    }
+
     </style>
 </head>
 
@@ -523,7 +578,7 @@
     <nav>
         <div class="navbar navbar-expand-lg navbar-light ">
             <div class="navbar_all">
-                <div class="navbar_logo d-none d-lg-block d-xl-block">
+                <div class="navbar_logo navbar-brand d-none d-lg-block d-xl-block">
                     <img src="./image/logo.PNG" alt="">
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -531,25 +586,26 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar_linkMain collapse navbar-collapse " id="navbarToggleExternalContent">
+              
+                <div class="navbar_linkMain collapse navbar-collapse"
+                    id="navbarToggleExternalContent">
                     <ul class="links1 navbar-nav ">
-                        <li class="mx-lg-4"><a href="">首頁</a>
-                        <li class="mx-lg-4"><a href="#about">關於興趣箱</a>
+                        <li class="mx-lg-4 "><a href="">首頁</a>
+                        <li class="mx-lg-4 "><a href="#about">關於興趣箱</a>
                             <!-- <ul> c
                                     <li><a data-scroll href=>興趣箱簡介</a></li>
                                     <li><a data-scroll href=>使命</a></li>
                                 </ul> -->
                         </li>
-                        <li class="mx-lg-4"><a href="#subscription">立即訂閱</a></li>
-                        <li class="mx-lg-4"><a href="#form">歷史查詢</a></li>
-                        <li class="mx-lg-4"><a href="#contact">聯絡我們</a></li>
+                        <li class="mx-lg-4 "><a href="#subscription">立即訂閱</a></li>
+                        <li class="mx-lg-4 "><a href="#form">歷史查詢</a></li>
+                        <li class="mx-lg-4 "><a href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
-                <div class="navbar_linkSecondary collapse navbar-collapse justify-content-end"
-                    id="navbarToggleExternalContent">
-                    <ul class="links2 navbar-nav">
-                        <li><a href=""> <img src="./image/account.png" alt="">會員</a></li>
-                        <li><a href=""><img src="./image/shopping-cart-black-shape.png" alt="">購物車</a></li>
+                <div class="navbar_linkSecondary justify-content-end">
+                    <ul class="links2">
+                        <li><a href=""><img src="./image/account.png" alt=""></a></li>
+                        <li><a href=""><img src="./image/shopping-cart-black-shape.png" alt=""></a></li>
                     </ul>
                 </div>
             </div>

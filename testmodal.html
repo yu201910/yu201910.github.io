@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <style>
@@ -148,6 +150,20 @@
             align-items: center;
             padding: 0 0 50px 0;
         }
+
+        /* 作品分享 */
+        /* #img1 img{
+            width:700px;
+            height:300px;
+        }
+        #img2 img{
+            width:300px;
+            height:300px;
+        }
+        #img3 img{
+            width:400px;
+            height:800px;
+        } */
     </style>
 </head>
 
@@ -159,7 +175,7 @@
 
 
     <div class="js-modal-2  modal  modal--2">
-        <span class="modal-close-btn">X</span>
+        <span class="modal-close-btn">x</span>
         <h2>2019-December</h2>
         <div id="theme">
             <div class="theme_all ">
@@ -191,8 +207,43 @@
             </div>
 
             <div class="lightbox">
-                <a id="img1" data-fancybox="gallery" href="./個人專題/image/熱銷10/保存動物紙玩具.jpg"><img src="./個人專題/image/熱銷10/保存動物紙玩具.jpg"></a>
-                <a id="img2" data-fancybox="gallery" href="./個人專題/image/熱銷10/凝膠蠟燭.jpg"><img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg"></a>
+                <div class="container">
+                    <div class="lightbox_title">
+                        <h2>作品分享</h2>
+                    </div>
+                    <div class="lightbox_images">
+                        <a id="img1" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/保存動物紙玩具.jpg">
+                            <img  src="./個人專題/image/熱銷10/保存動物紙玩具.jpg">
+                        </a>
+                        <a id="img2" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                        <a id="img3" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                        <a id="img4" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                        <a id="img5" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                        <a id="img6" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                        <a id="img7" data-fancybox="gallery" data-caption="Mountain hiking sunset"
+                            href="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                            <img src="./個人專題/image/熱銷10/凝膠蠟燭.jpg">
+                        </a>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -202,14 +253,26 @@
     <script src="https://cdn.bootcss.com/cta.js/0.3.2/cta.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  
-       
-       
-     </script>
+
 
 
 
     <script>
+        $('[data-fancybox="gallery"]').fancybox({
+            buttons: [
+                'slideShow',
+                'share',
+                'fullScreen',
+                'close'
+            ],
+        });
+    </script>
+
+
+
+    <script>
+
+        //modal
         var closeFn;
         function closeShowingModal() {
             var showingModal = document.querySelector('.modal.show');
