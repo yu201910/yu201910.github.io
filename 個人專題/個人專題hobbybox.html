@@ -236,6 +236,10 @@
             max-width: 1000px;
         }
 
+        .swiper_mobileClassification {
+            display: none;
+        }
+
         /* 使命 */
         #misson {
             height: 250px;
@@ -455,9 +459,11 @@
         .contact_content {
             margin: 30px 50px;
         }
-        .contact_images{
+
+        .contact_images {
             width: 120%;
         }
+
         .contact_images img {
             width: 100%;
         }
@@ -495,94 +501,137 @@
         }
 
         @media (max-width: 576px) {
-        /* 關於興趣箱手機板 */
-        .about_image_group1 {
-            margin: 0 0 15px 30px;
-        }
 
-        .about_image_group1 img {
-            width: 43%;
-            margin: 0 15px 0 0px;
-        }
+            /* 關於興趣箱手機板 */
+            .about_image_group1 {
+                margin: 0 0 15px 40px;
+            }
 
-        .about_image_group2 img {
-            width: 84%;
-            box-shadow: #938075 5px 5px 5px;
-            margin: 0 0 30px 30px;
-        }
-        /* 使命手機板*/
-        #misson {
-            height: 287px;
-            padding-top: 13px;
-        }
-        .misson_all {
-            padding: 0px;         
-        }
-        /* 本月主題預告手機板 */
-        .theme_all {
-            display: block;
-            padding: 15px;
-        }
-        .theme_image {
-            width: 100%;
-        }
-        .theme_content {
-            width: 100%;
-        }
-        .theme_title h2 {
-            margin: 0 0 30px 0;
-            padding: 30px 0 0 0 ;
-        }
-        .theme_text p {
-            margin: 50px 0;
-        }
-        .theme_content button {
-            margin-left: calc(50% - 47px);
-            margin-bottom: 30px;
-        }
+            .about_image_group1 img {
+                width: 43%;
+                margin: 0 15px 0 0px;
+            }
 
-        /* 歷史查詢手機板 */
-        .form {
-            height: 460px;
-        }
-        .form_image {
-            top: 282px;
-            left: 40px;
-        }
-        .form_image2 {
-            top: 282px;
-            right: 40px;
-        }
-        .form .btn {
-           margin :0 5px;
-        }
-        /* 訂閱方案手機板 */
+            .about_image_group2 img {
+                width: 84%;
+                box-shadow: #938075 5px 5px 5px;
+                margin: 0 0 30px 40px;
+            }
 
-        /* 聯絡我們手機板 */
-        #contact .container {
-            display: block;
-        }
-        .contact_form {
-            width: 100%;
-        }
-        .contact_detail {
-            width: 100%;
-        }
-         .contact_images{
-            width: 100%;
-        }
-        .contact_images img {
-            width: 400px;
-        }
-    }
+            /* 興趣箱類型手機板 */
 
+            .classification .row {
+                margin: 30px;
+            }
+
+            .classification_title h2 {
+                font-size: 25px;
+                font-weight: 600;
+                text-align: center;
+                padding: 50px;
+            }
+
+            .classification .container {
+                max-width: 1000px;
+            }
+
+            .swiper_mobileClassification {
+                display: block;
+                margin: 30px 0 50px 0;
+            }
+
+            .classification_content {
+                display: none;
+            }
+
+
+            /* 使命手機板*/
+            #misson {
+                height: 287px;
+                padding-top: 13px;
+            }
+
+            .misson_all {
+                padding: 0px;
+            }
+
+            /* 本月主題預告手機板 */
+            .theme_all {
+                display: block;
+                padding: 15px;
+            }
+
+            .theme_image {
+                width: 100%;
+            }
+
+            .theme_content {
+                width: 100%;
+            }
+
+            .theme_title h2 {
+                margin: 0 0 30px 0;
+                padding: 30px 0 0 0;
+            }
+
+            .theme_text p {
+                margin: 50px 0;
+            }
+
+            .theme_content button {
+                margin-left: calc(50% - 47px);
+                margin-bottom: 30px;
+            }
+
+            /* 歷史查詢手機板 */
+            .form {
+                height: 460px;
+            }
+
+            .form_image {
+                top: 282px;
+                left: 40px;
+            }
+
+            .form_image2 {
+                top: 282px;
+                right: 40px;
+            }
+
+            .form .btn {
+                margin: 0 5px;
+            }
+
+            /* 訂閱方案手機板 */
+
+            /* 聯絡我們手機板 */
+            #contact .container {
+                display: block;
+            }
+
+            .contact_form {
+                width: 100%;
+            }
+
+            .contact_detail {
+                width: 100%;
+            }
+
+            .contact_images {
+                width: 100%;
+            }
+
+            .contact_images img {
+                width: 400px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="banner">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
+        <div class="swiper-container swiper_banner">
+            <div class="swiper-wrapper ">
                 <div class="swiper-slide">
                     <img class="banner_image" src="./image/banner/首頁.jpg" alt="">
                     <ul class="banner_button btn btn-outline-dark border-light">
@@ -621,9 +670,8 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-              
-                <div class="navbar_linkMain collapse navbar-collapse"
-                    id="navbarToggleExternalContent">
+
+                <div class="navbar_linkMain collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="links1 navbar-nav ">
                         <li class="mx-lg-4 "><a href="">首頁</a>
                         <li class="mx-lg-4 "><a href="#about">關於興趣箱</a>
@@ -699,19 +747,53 @@
                 <h4> ❖興趣箱裡有什麼?</h4>
             </div>
             <div class="classification_content row  justify-content-md-center">
-                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/配飾.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/食品.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/植栽.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/配飾.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/食品.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/植栽.jpg" alt="">
             </div>
             <div class="classification_content row justify-content-md-center">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/木製.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/蠟燭.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/著色.jpeg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/木製.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/蠟燭.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/著色.jpeg" alt="">
             </div>
             <div class="classification_content row justify-content-md-center">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/黏土.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/紙藝.jpg" alt="">
-                <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/皮革.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/黏土.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/紙藝.jpg" alt="">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/皮革.jpg" alt="">
+            </div>
+            <!-- 手機板 classification Swiper -->
+            <div class="swiper-container swiper_mobileClassification">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4 col-md-3 col-12" src="./image/類型/配飾.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/食品.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12 " src="./image/類型/植栽.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/木製.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/蠟燭.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/著色.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/黏土.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/紙藝.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="classification_image col-xl-4  col-md-3 col-12" src="./image/類型/皮革.jpg" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
@@ -792,7 +874,7 @@
                     <h2> 訂閱方案</h2>
                 </div>
                 <div class="subscription_content row justify-content-xl-center justify-content-md-center">
-                    <div class="card col-xl-3 col-md-3 col-12 " style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3 " style="width: 18rem;">
                         <img src="./image/方案訂閱/1月.PNG" class="card-img-top" alt="...">
                         <div class="card-body  ">
                             <h5 class="card-title">1個月方案</h5>
@@ -800,7 +882,7 @@
                             <a href="#" class="btn btn-dark ">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-3 col-md-3 col-12" style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3" style="width: 18rem;">
                         <img src="./image/方案訂閱/3月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">3個月方案</h5>
@@ -808,7 +890,7 @@
                             <a href="#" class="btn btn-dark">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-3 col-md-3 col-12" style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3" style="width: 18rem;">
                         <img src="./image/方案訂閱/6月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">6個月方案</h5>
@@ -965,7 +1047,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper_banner', {
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -976,8 +1058,10 @@
             loop: true,
         });
 
+    </script>
 
-        // $(document).scroll(function () {
+
+    <!-- // $(document).scroll(function () {
         //     var documentScrollTop = $(document).scrollTop();
         //     if (documentScrollTop > $('.banner').height()) {
         //         $('.navbar').addClass('fixedattop');
@@ -988,8 +1072,27 @@
         //         $('.navbar').removeClass('fixedattop');
         //         $('#about').css('margin-top', '0px');
         //     }
-        // });
+        // }); -->
 
+    <script>
+        var swiper = new Swiper('.swiper_mobileClassification', {
+            effect: 'cube',
+            grabCursor: true,
+            loop: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            });
     </script>
 
 </body>
