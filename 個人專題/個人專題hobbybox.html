@@ -389,6 +389,9 @@
             font-weight: 600;
         }
 
+        .subscription_content_mobile {
+            display: none;
+        }
 
         /* 留言表單 */
         #contact {
@@ -461,7 +464,7 @@
         }
 
         .contact_images {
-            width: 120%;
+            width: 100%;
         }
 
         .contact_images img {
@@ -500,62 +503,43 @@
             margin: 0;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
 
-            /* 關於興趣箱手機板 */
+            /* 關於興趣箱平板 */
             .about_image_group1 {
-                margin: 0 0 15px 40px;
-            }
-
-            .about_image_group1 img {
-                width: 43%;
-                margin: 0 15px 0 0px;
+                margin: 0 0 15px 100px;
             }
 
             .about_image_group2 img {
-                width: 84%;
+                width: 72%;
                 box-shadow: #938075 5px 5px 5px;
-                margin: 0 0 30px 40px;
+                margin: -1px 0 30px 100px;
             }
 
-            /* 興趣箱類型手機板 */
-
-            .classification .row {
-                margin: 30px;
-            }
-
-            .classification_title h2 {
-                font-size: 25px;
-                font-weight: 600;
-                text-align: center;
-                padding: 50px;
-            }
-
-            .classification .container {
-                max-width: 1000px;
-            }
-
-            .swiper_mobileClassification {
-                display: block;
-                margin: 30px 0 50px 0;
-            }
-
-            .classification_content {
-                display: none;
-            }
-
-
-            /* 使命手機板*/
             #misson {
-                height: 287px;
-                padding-top: 13px;
+                height: 290px;
             }
 
-            .misson_all {
-                padding: 0px;
+            /* 歷史查詢平板 */
+            .form {
+                height: 460px;
             }
 
-            /* 本月主題預告手機板 */
+            .form_image {
+                top: 282px;
+                left: 40px;
+            }
+
+            .form_image2 {
+                top: 282px;
+                right: 40px;
+            }
+
+            .form .btn {
+                margin: 0 5px;
+            }
+
+            /* 本月主題預告平板 */
             .theme_all {
                 display: block;
                 padding: 15px;
@@ -582,49 +566,161 @@
                 margin-left: calc(50% - 47px);
                 margin-bottom: 30px;
             }
-
-            /* 歷史查詢手機板 */
-            .form {
-                height: 460px;
-            }
-
-            .form_image {
-                top: 282px;
-                left: 40px;
-            }
-
-            .form_image2 {
-                top: 282px;
-                right: 40px;
-            }
-
-            .form .btn {
-                margin: 0 5px;
-            }
-
-            /* 訂閱方案手機板 */
-
-            /* 聯絡我們手機板 */
-            #contact .container {
-                display: block;
-            }
-
-            .contact_form {
-                width: 100%;
-            }
-
-            .contact_detail {
-                width: 100%;
-            }
-
-            .contact_images {
-                width: 100%;
-            }
-
-            .contact_images img {
-                width: 400px;
-            }
         }
+
+            @media (max-width: 576px) {
+
+                /* 關於興趣箱手機板 */
+                .about_image_group1 {
+                    margin: 0 0 15px 40px;
+                }
+
+                .about_image_group1 img {
+                    width: 43%;
+                    margin: 0 15px 0 0px;
+                }
+
+                .about_image_group2 img {
+                    width: 84%;
+                    margin: 0 0 30px 40px;
+                }
+
+                /* 興趣箱類型手機板 */
+
+                .classification .row {
+                    margin: 30px;
+                }
+
+                .classification_title h2 {
+                    font-size: 25px;
+                    font-weight: 600;
+                    text-align: center;
+                    padding: 50px;
+                }
+
+                .classification .container {
+                    max-width: 1000px;
+                }
+
+                .swiper_mobileClassification {
+                    display: block;
+                    margin: 15px 0 20px 0;
+                }
+
+                .classification_content {
+                    display: none;
+                }
+
+                .swiper-container {
+                    height: 60vh;
+                }
+
+
+                /* 使命手機板*/
+                #misson {
+                    height: 287px;
+                    padding-top: 13px;
+                }
+
+                .misson_all {
+                    padding: 17px;
+                }
+
+                /* 訂閱方案手機板 */
+                .subscription_content {
+                    display: none;
+                }
+
+                .card_mobile {
+                    width: 90%;
+                    background-color: white;
+                    margin: 15px auto;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .card_mobile img {
+                    width: 40%;
+                }
+
+                .card_body_mobile {
+                    margin: 0 auto;
+                }
+
+                .subscription_content_mobile {
+                    display: block;
+                }
+
+                /* 聯絡我們手機板 */
+                #contact .container {
+                    display: block;
+                }
+
+                .contact_form {
+                    width: 100%;
+                }
+
+                .contact_detail {
+                    width: 100%;
+                }
+
+                .contact_images {
+                    width: 100%;
+                }
+
+                .contact_images img {
+                    width: 400px;
+                }
+            }
+
+            @media (max-width: 414px) {
+                .contact_images img {
+                    width: 100%;
+                }
+
+                .misson_all {
+                    padding: .5%;
+                }
+
+                .theme_text {
+                    margin: -16px 26px 0px;
+                }
+
+            }
+
+            @media (max-width: 320px) {
+                .about_image_group1 {
+                    margin: 0 0 15px 25px;
+                }
+
+                .about_image_group2 {
+                    margin: 0 9px 0px -16px;
+                }
+
+                .about_text_title h5 {
+                    font-size: 22px;
+                }
+
+                #misson {
+                    height: 322px;
+                }
+
+                .form_image {
+                    left: 0px;
+                }
+
+                .form_image2 {
+                    right: 0px;
+                }
+
+                .contact_content {
+                    margin: 30px 30px;
+                }
+
+                .social_icons img {
+                    width: 90%;
+                }
+            }
     </style>
 </head>
 
@@ -874,15 +970,15 @@
                     <h2> 訂閱方案</h2>
                 </div>
                 <div class="subscription_content row justify-content-xl-center justify-content-md-center">
-                    <div class="card col-xl-3 col-md-3 col-sm-3 " style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3 col-12 " style="width: 18rem;">
                         <img src="./image/方案訂閱/1月.PNG" class="card-img-top" alt="...">
-                        <div class="card-body  ">
+                        <div class="card-body">
                             <h5 class="card-title">1個月方案</h5>
                             <p class="card-text">$300/月</p>
                             <a href="#" class="btn btn-dark ">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-3 col-md-3 col-sm-3" style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3 col-12" style="width: 18rem;">
                         <img src="./image/方案訂閱/3月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">3個月方案</h5>
@@ -890,12 +986,39 @@
                             <a href="#" class="btn btn-dark">立即訂閱 </a>
                         </div>
                     </div>
-                    <div class="card col-xl-3 col-md-3 col-sm-3" style="width: 18rem;">
+                    <div class="card col-xl-3 col-md-3 col-sm-3 col-12" style="width: 18rem;">
                         <img src="./image/方案訂閱/6月.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">6個月方案</h5>
                             <p class="card-text">$1440/6月</p>
                             <a href="#" class="btn btn-dark ">立即訂閱 </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 訂閱方案手機板 -->
+                <div class="subscription_content_mobile">
+                    <div class="card_mobile">
+                        <img src="./image/方案訂閱/1月.PNG" alt="">
+                        <div class="card_body_mobile">
+                            <h5 class="card-title">1個月方案</h5>
+                            <p class="card-text">$300/月</p>
+                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                        </div>
+                    </div>
+                    <div class="card_mobile">
+                        <img src="./image/方案訂閱/3月.PNG" alt="">
+                        <div class="card_body_mobile">
+                            <h5 class="card-title">3個月方案</h5>
+                            <p class="card-text">$810/3月</p>
+                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                        </div>
+                    </div>
+                    <div class="card_mobile">
+                        <img src="./image/方案訂閱/6月.PNG" alt="">
+                        <div class="card_body_mobile">
+                            <h5 class="card-title">6個月方案</h5>
+                            <p class="card-text">$1440/6月</p>
+                            <a href="#" class="btn btn-dark">立即訂閱 </a>
                         </div>
                     </div>
                 </div>
@@ -940,7 +1063,7 @@
                     </div>
                     <div class="form-group row">
                         <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
-                        <input type="file" class="form-control-file col-sm-9 " id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file col-sm-9" id="exampleFormControlFile1">
                     </div>
                     <div class="form-group row justify-content-center">
                         <div class="justify-content-center">
@@ -1092,7 +1215,7 @@
                 delay: 4000,
                 disableOnInteraction: false,
             },
-            });
+        });
     </script>
 
 </body>
