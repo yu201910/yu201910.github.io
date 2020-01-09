@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>Document</title>
+    <title>興趣箱</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
+    <link href="css/hover-min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         * {
@@ -28,6 +30,7 @@
             font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", sans-serif;
             background-color: #CEC8BC;
         }
+
 
         /* Banner */
 
@@ -148,6 +151,14 @@
             margin: 0 5px;
         }
 
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 20;
+        }
+
+
 
         /* about */
         #about {
@@ -240,6 +251,9 @@
             display: none;
         }
 
+
+
+
         /* 使命 */
         #misson {
             height: 250px;
@@ -247,12 +261,12 @@
             background-image: url('http://static1.squarespace.com/static/5866ffbad2b857fd0d13208e/5880f1f005b03728fdaf0c16/5cd42c54419202b37b3f3d82/1571923139618/andrian-valeanu-82531-unsplash+%281%29.jpg?format=1500w');
             background-size: cover;
             background-position: center;
-            opacity: 1;
+            background-attachment: fixed;
         }
 
         .misson_all {
             width: 93%;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.336);
             padding: 0px 0px 40px 0px;
             margin: 0 auto;
             border: white solid 3px;
@@ -463,6 +477,10 @@
             margin: 30px 50px;
         }
 
+        .hvr-bubble-float-bottom::before {
+            border-color: black transparent transparent transparent;
+        }
+
         .contact_images {
             width: 100%;
         }
@@ -501,6 +519,48 @@
 
         .copyright p {
             margin: 0;
+        }
+
+        @media (max-width: 1280px) {
+
+            /* 本月主題預告 */
+            .theme_image img {
+                height: 100%;
+            }
+
+            .theme_text p {
+                margin: 70px 0;
+            }
+
+            .theme_text {
+                margin: -8px 50px 0px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-toggle {
+                position: relative;
+            }
+
+            #navbarToggleExternalContent {
+                transform: translateX(-117%);
+                transition: transform .35s ease;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.842);
+                position: absolute;
+                top: 56px;
+                z-index: 10;
+            }
+
+            #navbarToggleExternalContent.menu-show {
+                transform: translateX(-15%);
+                padding: 30px 40px 100vh 40px;
+                opacity: 0.8;
+            }
+
+            .navbar_all ul li a {
+                color: rgb(255, 255, 255);
+            }
         }
 
         @media (max-width: 768px) {
@@ -568,159 +628,158 @@
             }
         }
 
-            @media (max-width: 576px) {
+        @media (max-width: 576px) {
 
-                /* 關於興趣箱手機板 */
-                .about_image_group1 {
-                    margin: 0 0 15px 40px;
-                }
-
-                .about_image_group1 img {
-                    width: 43%;
-                    margin: 0 15px 0 0px;
-                }
-
-                .about_image_group2 img {
-                    width: 84%;
-                    margin: 0 0 30px 40px;
-                }
-
-                /* 興趣箱類型手機板 */
-
-                .classification .row {
-                    margin: 30px;
-                }
-
-                .classification_title h2 {
-                    font-size: 25px;
-                    font-weight: 600;
-                    text-align: center;
-                    padding: 50px;
-                }
-
-                .classification .container {
-                    max-width: 1000px;
-                }
-
-                .swiper_mobileClassification {
-                    display: block;
-                    margin: 15px 0 20px 0;
-                }
-
-                .classification_content {
-                    display: none;
-                }
-
-                .swiper-container {
-                    height: 60vh;
-                }
-
-
-                /* 使命手機板*/
-                #misson {
-                    height: 287px;
-                    padding-top: 13px;
-                }
-
-                .misson_all {
-                    padding: 17px;
-                }
-
-                /* 訂閱方案手機板 */
-                .subscription_content {
-                    display: none;
-                }
-
-                .card_mobile {
-                    width: 90%;
-                    background-color: white;
-                    margin: 15px auto;
-                    display: flex;
-                    align-items: center;
-                }
-
-                .card_mobile img {
-                    width: 40%;
-                }
-
-                .card_body_mobile {
-                    margin: 0 auto;
-                }
-
-                .subscription_content_mobile {
-                    display: block;
-                }
-
-                /* 聯絡我們手機板 */
-                #contact .container {
-                    display: block;
-                }
-
-                .contact_form {
-                    width: 100%;
-                }
-
-                .contact_detail {
-                    width: 100%;
-                }
-
-                .contact_images {
-                    width: 100%;
-                }
-
-                .contact_images img {
-                    width: 400px;
-                }
+            /* 關於興趣箱手機板 */
+            .about_image_group1 {
+                margin: 0 0 15px 40px;
             }
 
-            @media (max-width: 414px) {
-                .contact_images img {
-                    width: 100%;
-                }
-
-                .misson_all {
-                    padding: .5%;
-                }
-
-                .theme_text {
-                    margin: -16px 26px 0px;
-                }
-
+            .about_image_group1 img {
+                width: 43%;
+                margin: 0 15px 0 0px;
             }
 
-            @media (max-width: 320px) {
-                .about_image_group1 {
-                    margin: 0 0 15px 25px;
-                }
-
-                .about_image_group2 {
-                    margin: 0 9px 0px -16px;
-                }
-
-                .about_text_title h5 {
-                    font-size: 22px;
-                }
-
-                #misson {
-                    height: 322px;
-                }
-
-                .form_image {
-                    left: 0px;
-                }
-
-                .form_image2 {
-                    right: 0px;
-                }
-
-                .contact_content {
-                    margin: 30px 30px;
-                }
-
-                .social_icons img {
-                    width: 90%;
-                }
+            .about_image_group2 img {
+                width: 84%;
+                margin: 0 0 30px 40px;
             }
+
+            /* 興趣箱類型手機板 */
+
+            .classification .row {
+                margin: 30px;
+            }
+
+            .classification_title h2 {
+                font-size: 25px;
+                font-weight: 600;
+                text-align: center;
+                padding: 50px;
+            }
+
+            .classification .container {
+                max-width: 1000px;
+            }
+
+            .swiper_mobileClassification {
+                display: block;
+                margin: 15px 0 20px 0;
+            }
+
+            .classification_content {
+                display: none;
+            }
+
+            .swiper-container {
+                height: 60vh;
+            }
+
+
+            /* 使命手機板*/
+            #misson {
+                height: 287px;
+                padding-top: 13px;
+            }
+
+            .misson_all {
+                padding: 17px;
+            }
+
+            /* 訂閱方案手機板 */
+            .subscription_content {
+                display: none;
+            }
+
+            .card_mobile {
+                width: 90%;
+                background-color: white;
+                margin: 15px auto;
+                display: flex;
+                align-items: center;
+            }
+
+            .card_mobile img {
+                width: 40%;
+            }
+
+            .card_body_mobile {
+                margin: 0 auto;
+            }
+
+            .subscription_content_mobile {
+                display: block;
+            }
+
+            /* 聯絡我們手機板 */
+            #contact .container {
+                display: block;
+            }
+
+            .contact_form {
+                width: 100%;
+            }
+
+            .contact_detail {
+                width: 100%;
+            }
+
+            .contact_images {
+                width: 100%;
+            }
+
+            .contact_images img {
+                width: 400px;
+            }
+        }
+
+        @media (max-width: 414px) {
+            .contact_images img {
+                width: 100%;
+            }
+
+            .misson_all {
+                padding: .5%;
+            }
+
+            .theme_text {
+                margin: -16px 26px 0px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .about_image_group1 {
+                margin: 0 0 15px 25px;
+            }
+
+            .about_image_group2 {
+                margin: 0 9px 0px -16px;
+            }
+
+            .about_text_title h5 {
+                font-size: 22px;
+            }
+
+            #misson {
+                height: 322px;
+            }
+
+            .form_image {
+                left: 0px;
+            }
+
+            .form_image2 {
+                right: 0px;
+            }
+
+            .contact_content {
+                margin: 30px 30px;
+            }
+
+            .social_icons img {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 
@@ -730,19 +789,19 @@
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
                     <img class="banner_image" src="./image/banner/首頁.jpg" alt="">
-                    <ul class="banner_button btn btn-outline-dark border-light">
-                        <li><a href="#about">開始探索</a>
+                    <ul class="banner_button btn btn-outline-dark border-light hvr-wobble-vertical">
+                        <li><a href="#navbar">開始探索</a>
                     </ul>
                 </div>
                 <div class="swiper-slide"><img class="banner_image" src="./image/banner/C4WcRQeVMAENLna.jpg" alt="">
-                    <ul class="banner_button btn btn-outline-dark border-light">
-                        <li><a href="#about">開始探索</a>
+                    <ul class="banner_button btn btn-outline-dark border-light hvr-wobble-vertical">
+                        <li><a href="#navbar">開始探索</a>
                     </ul>
                 </div>
                 <div class="swiper-slide"><img class="banner_image"
                         src="./image/banner/20861899_1475762212482171_1766205133724260022_o.jpg" alt="">
-                    <ul class="banner_button btn btn-outline-dark border-light">
-                        <li><a href="#about">開始探索</a>
+                    <ul class="banner_button btn btn-outline-dark border-light hvr-wobble-vertical">
+                        <li><a href="#navbar">開始探索</a>
                     </ul>
                 </div>
             </div>
@@ -756,7 +815,7 @@
     </div>
 
     <nav>
-        <div class="navbar navbar-expand-lg navbar-light ">
+        <div id="navbar" class="navbar navbar-expand-lg navbar-light">
             <div class="navbar_all">
                 <div class="navbar_logo navbar-brand d-none d-lg-block d-xl-block">
                     <img src="./image/logo.PNG" alt="">
@@ -769,16 +828,16 @@
 
                 <div class="navbar_linkMain collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="links1 navbar-nav ">
-                        <li class="mx-lg-4 "><a href="">首頁</a>
-                        <li class="mx-lg-4 "><a href="#about">關於興趣箱</a>
+                        <li class="mx-lg-4"><a href="">首頁</a>
+                        <li class="mx-lg-4"><a href="#about">關於興趣箱</a>
                             <!-- <ul> c
                                     <li><a data-scroll href=>興趣箱簡介</a></li>
                                     <li><a data-scroll href=>使命</a></li>
                                 </ul> -->
                         </li>
-                        <li class="mx-lg-4 "><a href="#subscription">立即訂閱</a></li>
-                        <li class="mx-lg-4 "><a href="#form">歷史查詢</a></li>
-                        <li class="mx-lg-4 "><a href="#contact">聯絡我們</a></li>
+                        <li class="mx-lg-4"><a href="#subscription">立即訂閱</a></li>
+                        <li class="mx-lg-4"><a href="#form">歷史查詢</a></li>
+                        <li class="mx-lg-4"><a href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
                 <div class="navbar_linkSecondary justify-content-end">
@@ -842,8 +901,8 @@
             <div class="about_subtitle">
                 <h4> ❖興趣箱裡有什麼?</h4>
             </div>
-            <div class="classification_content row  justify-content-md-center">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/配飾.jpg" alt="">
+            <div class="classification_content row justify-content-md-center">
+                <img class="classification_image col-xl-4 col-md-3 col-sm-4 " src="./image/類型/配飾.jpg" alt="">
                 <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/食品.jpg" alt="">
                 <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/植栽.jpg" alt="">
             </div>
@@ -955,11 +1014,13 @@
                         <img src="./image/searching-magnifying-glass24.png" alt=""> &nbsp搜尋</button>
                 </div>
             </form>
-            <div class="form_image ">
-                <img width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢icon-02.png" alt="">
+            <div class="form_image">
+                <img data-aos="fade-right" data-aos-easing="linear" data-aos-duration="3000"
+                     width="180px" height="180px"
+                    src="./image/歷史查詢icons/歷史查詢icon-02.png" alt="">
             </div>
-            <div class="form_image2 ">
-                <img width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
+            <div class="form_image2">
+                <img data-aos="fade-left" data-aos-easing="linear" data-aos-duration="3000" width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
         </div>
     </div>
 
@@ -971,11 +1032,11 @@
                 </div>
                 <div class="subscription_content row justify-content-xl-center justify-content-md-center">
                     <div class="card col-xl-3 col-md-3 col-sm-3 col-12 " style="width: 18rem;">
-                        <img src="./image/方案訂閱/1月.PNG" class="card-img-top" alt="...">
+                        <img src="./image/方案訂閱/1月-3.PNG" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">1個月方案</h5>
                             <p class="card-text">$300/月</p>
-                            <a href="#" class="btn btn-dark ">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                     <div class="card col-xl-3 col-md-3 col-sm-3 col-12" style="width: 18rem;">
@@ -983,7 +1044,7 @@
                         <div class="card-body">
                             <h5 class="card-title">3個月方案</h5>
                             <p class="card-text">$810/3月</p>
-                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                     <div class="card col-xl-3 col-md-3 col-sm-3 col-12" style="width: 18rem;">
@@ -991,18 +1052,18 @@
                         <div class="card-body">
                             <h5 class="card-title">6個月方案</h5>
                             <p class="card-text">$1440/6月</p>
-                            <a href="#" class="btn btn-dark ">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                 </div>
                 <!-- 訂閱方案手機板 -->
                 <div class="subscription_content_mobile">
                     <div class="card_mobile">
-                        <img src="./image/方案訂閱/1月.PNG" alt="">
+                        <img src="./image/方案訂閱/1月-3.PNG" alt="">
                         <div class="card_body_mobile">
                             <h5 class="card-title">1個月方案</h5>
                             <p class="card-text">$300/月</p>
-                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                     <div class="card_mobile">
@@ -1010,7 +1071,7 @@
                         <div class="card_body_mobile">
                             <h5 class="card-title">3個月方案</h5>
                             <p class="card-text">$810/3月</p>
-                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                     <div class="card_mobile">
@@ -1018,7 +1079,7 @@
                         <div class="card_body_mobile">
                             <h5 class="card-title">6個月方案</h5>
                             <p class="card-text">$1440/6月</p>
-                            <a href="#" class="btn btn-dark">立即訂閱 </a>
+                            <a href="#" class="btn btn-dark hvr-buzz">立即訂閱 </a>
                         </div>
                     </div>
                 </div>
@@ -1039,7 +1100,8 @@
                     <div class="form-group row">
                         <label for="inputName" class="col-sm-3 col-form-label">姓名</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                            <input type="text" class="form-control" id="inputName" placeholder="Name"
+                                required="required">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -1051,13 +1113,14 @@
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
-                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email"
+                                required="required">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">留言內容</label>
                         <div class="col-sm-9"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                placeholder="請輸入文字"></textarea>
+                                placeholder="請輸入文字" required="required"></textarea>
                         </div>
 
                     </div>
@@ -1074,7 +1137,8 @@
             </div>
             <div class="contact_detail">
                 <div class="contact_question">
-                    <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-dark btn-lg hvr-pulse-shrink" data-toggle="modal"
+                        data-target="#exampleModal">
                         常見問題
                     </button>
                     <!-- Modal -->
@@ -1108,7 +1172,7 @@
                     </div>
                 </div>
                 <div class="contact_information">
-                    <div class="contact_detail_title">聯絡資訊</div>
+                    <div class="contact_detail_title hvr-bubble-float-bottom">聯絡資訊</div>
                     <div class="contact_content">
                         <p>服務時間:9:00~17:00</p>
                         <p>電話:00-12345678</p>
@@ -1167,6 +1231,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS初始化 -->
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -1183,20 +1253,7 @@
 
     </script>
 
-
-    <!-- // $(document).scroll(function () {
-        //     var documentScrollTop = $(document).scrollTop();
-        //     if (documentScrollTop > $('.banner').height()) {
-        //         $('.navbar').addClass('fixedattop');
-        //         var shiftContent = $('.navbar').height();
-        //         $('#about').css('margin-top', shiftContent + 'px');
-        //     }
-        //     else if ($('.navbar').hasClass('fixedattop')) {
-        //         $('.navbar').removeClass('fixedattop');
-        //         $('#about').css('margin-top', '0px');
-        //     }
-        // }); -->
-
+    <!-- 手機類別swiper -->
     <script>
         var swiper = new Swiper('.swiper_mobileClassification', {
             effect: 'cube',
@@ -1217,7 +1274,34 @@
             },
         });
     </script>
+    <!-- sticky navbar -->
+    <script>
+        window.onscroll = function () { myFunction() };
 
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <!-- navbar漢堡條彈出由左至右 -->
+    <script>
+        const $menu = $('#navbarToggleExternalContent');
+
+        $menu.on('show.bs.collapse', function () {
+            $menu.addClass('menu-show');
+        });
+
+        $menu.on('hide.bs.collapse', function () {
+            $menu.removeClass('menu-show');
+        });
+    </script>
 </body>
 
 </html>
