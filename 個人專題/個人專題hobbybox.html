@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>興趣箱</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
     <link href="css/hover-min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>興趣箱</title>
 
     <style>
         * {
@@ -30,7 +34,6 @@
             font-family: "Microsoft JhengHei", "微軟正黑體", "Microsoft YaHei", sans-serif;
             background-color: #CEC8BC;
         }
-
 
         /* Banner */
 
@@ -124,9 +127,75 @@
             display: block;
         }
 
-        .navbar_all ul li a:hover {
-            color: brown;
+        .navbar_all ul li {
+            position: relative;
         }
+
+        .navbar_all ul li .dropdown:after {
+            content: "";
+            width: 96px;
+            height: 4px;
+            background: black;
+            opacity: 0;
+            transition: all 0.4s ease;
+            position: absolute;
+            top: 53px;
+            left: -7px;
+            margin-top: -3px;
+            z-index: 2;
+
+        }
+
+        .navbar_all ul li:hover .dropdown:after {
+            opacity: 1;
+        }
+
+        .navbar_all ul li a:hover {
+            color: white;
+        }
+
+        .navbar_all ul li:hover ul {
+            height: 150px;
+        }
+
+        .navbar_all ul li ul {
+            padding: 0;
+            text-align: left;
+            position: absolute;
+            width: 150px;
+            left: -10px;
+            top: 55px;
+            z-index: 12;
+            background-color: rgba(0, 0, 0, 0.781);
+            transition-duration: 0.5s;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .navbar_all ul li ul li {
+            list-style: none;
+            padding: 10px 15px;
+            line-height: 1.5;
+
+        }
+
+        .navbar_all ul li ul li a {
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar_all ul li ul li:hover {
+            background: #938075;
+            transition: all 0.4s ease
+        }
+
+        .navbar_all ul li ul li:hover a {
+            color: white;
+            transition: all 0.4s ease
+        }
+
 
         .links1 {
             display: flex;
@@ -158,11 +227,15 @@
             z-index: 20;
         }
 
-
-
         /* about */
         #about {
             background-color: #CEC8BC;
+        }
+
+        #about:before {
+            content: "";
+            display: block;
+            height: 70px;
         }
 
         .title h3 {
@@ -232,8 +305,51 @@
         }
 
         /* 類型 */
+        #classification:before {
+            content: "";
+            display: block;
+            height: 70px;
+        }
+
         .classification .row {
             margin: 30px;
+        }
+
+        .classification_images img {
+            width: 100%;
+
+        }
+
+        .classification_images {
+            position: relative;
+        }
+
+        .mask {
+            width: 91%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: all 200ms ease-in-out;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            margin: 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mask:hover {
+            opacity: 1;
+            background-color: rgba(0, 0, 0, 0.555);
+        }
+
+        .mask p {
+            color: white;
+            font-size: 30px;
+            border: solid 1px white;
+            margin: 0;
+            padding: 30%;
         }
 
         .classification_title h2 {
@@ -269,7 +385,7 @@
             background-color: rgba(0, 0, 0, 0.336);
             padding: 0px 0px 40px 0px;
             margin: 0 auto;
-            border: white solid 3px;
+            border: white solid 2px;
         }
 
         .misson_title h2 {
@@ -289,6 +405,7 @@
         }
 
         /* 本月主題 */
+
         .theme_all {
             display: flex;
             padding: 50px;
@@ -335,6 +452,7 @@
         }
 
         /* 歷史查詢 */
+
         .form {
             height: 200px;
             background-color: black;
@@ -374,6 +492,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             padding-bottom: 50px;
+        }
+
+        #subscription:before {
+            content: "";
+            display: block;
+            height: 70px;
         }
 
         .subscription_all {
@@ -519,6 +643,17 @@
 
         .copyright p {
             margin: 0;
+        }
+
+        /* 返回頂層 */
+        #backToTop {
+            position:fixed;
+            right:20px;
+            bottom: 50px;
+            width:50px;
+            height:50px;
+            border-radius: 999em;
+            background-color: white;
         }
 
         @media (max-width: 1280px) {
@@ -784,7 +919,7 @@
 </head>
 
 <body>
-    <div class="banner">
+    <div id="banner" class="banner">
         <div class="swiper-container swiper_banner">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
@@ -827,17 +962,21 @@
                 </button>
 
                 <div class="navbar_linkMain collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <ul class="links1 navbar-nav ">
-                        <li class="mx-lg-4"><a href="">首頁</a>
-                        <li class="mx-lg-4"><a href="#about">關於興趣箱</a>
-                            <!-- <ul> c
-                                    <li><a data-scroll href=>興趣箱簡介</a></li>
-                                    <li><a data-scroll href=>使命</a></li>
-                                </ul> -->
+                    <ul class="links1 navbar-nav">
+                        <li class="mx-lg-4"><a class="dropdown" href="#banner">首頁</a>
+                        <li class="mx-lg-4"><a class="dropdown" href="#about">關於興趣箱</a>
+                            <ul>
+                                <li><a href="#about">興趣箱簡介</a</li> <li><a href="#classification">興趣箱類別</a></li>
+                                <li><a href="#misson">我們的使命</a></li>
+                            </ul>
                         </li>
-                        <li class="mx-lg-4"><a href="#subscription">立即訂閱</a></li>
-                        <li class="mx-lg-4"><a href="#form">歷史查詢</a></li>
-                        <li class="mx-lg-4"><a href="#contact">聯絡我們</a></li>
+                        <li class="mx-lg-4"><a class="dropdown" href="#subscription">立即訂閱</a></li>
+                        <li class="mx-lg-4"><a class="dropdown" href="#form">主題查詢</a>
+                            <ul>
+                                <li><a href="#theme">本月主題</a</li> <li><a href="#form">歷史查詢</a></li>
+                            </ul>
+                        </li>
+                        <li class="mx-lg-4"><a class="dropdown" href="#contact">聯絡我們</a></li>
                     </ul>
                 </div>
                 <div class="navbar_linkSecondary justify-content-end">
@@ -860,10 +999,10 @@
         <div class="about_content row">
             <div class="about_images col-xl-6">
                 <div class="about_image_group1">
-                    <img src="./image/熱銷10/香水.jpg" alt="">
-                    <img src="./image/熱銷10/手工筆記本裝訂套件.jpg" alt="">
+                    <img class="hvr-grow" src="./image/熱銷10/香水.jpg" alt="">
+                    <img class="hvr-grow" src="./image/熱銷10/手工筆記本裝訂套件.jpg" alt="">
                 </div>
-                <div class="about_image_group2">
+                <div class="about_image_group2 hvr-pulse">
                     <img src="./image/banner/IMG_4439.jpg" alt="">
                 </div>
             </div>
@@ -902,19 +1041,64 @@
                 <h4> ❖興趣箱裡有什麼?</h4>
             </div>
             <div class="classification_content row justify-content-md-center">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4 " src="./image/類型/配飾.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/食品.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/植栽.jpg" alt="">
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/配飾.jpg" alt="">
+                    <div class="mask">
+                        <p><span>配飾</span></p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/食品.jpg" alt="">
+                    <div class="mask">
+                        <p>食品</p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/植栽.jpg" alt="">
+                    <div class="mask">
+                        <p>植栽</p>
+                    </div>
+                </div>
             </div>
             <div class="classification_content row justify-content-md-center">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/木製.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/蠟燭.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/著色.jpeg" alt="">
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/木製.jpg" alt="">
+                    <div class="mask">
+                        <p>木製</p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/蠟燭.jpg" alt="">
+                    <div class="mask">
+                        <p>蠟燭</p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/著色.jpeg" alt="">
+                    <div class="mask">
+                        <p>著色</p>
+                    </div>
+                </div>
             </div>
             <div class="classification_content row justify-content-md-center">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/黏土.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/紙藝.jpg" alt="">
-                <img class="classification_image col-xl-4 col-md-3 col-sm-4" src="./image/類型/皮革.jpg" alt="">
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/黏土.jpg" alt="">
+                    <div class="mask">
+                        <p>黏土</p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/紙藝.jpg" alt="">
+                    <div class="mask">
+                        <p>紙藝</p>
+                    </div>
+                </div>
+                <div class="classification_images col-xl-4 col-md-3 col-sm-4">
+                    <img class="classification_image" src="./image/類型/皮革.jpg" alt="">
+                    <div class="mask">
+                        <p>皮革</p>
+                    </div>
+                </div>
             </div>
             <!-- 手機板 classification Swiper -->
             <div class="swiper-container swiper_mobileClassification">
@@ -956,10 +1140,10 @@
     <div id="misson">
         <div class="misson_all ">
             <div class="container">
-                <div class="misson_title">
+                <div class="misson_title" data-aos="fade-up" data-aos-duration="2000">
                     <h2>我們的使命</h2>
                 </div>
-                <div class="misson_content">
+                <div class="misson_content" data-aos="fade-up" data-aos-duration="3000">
                     <p>透過我們精心挑選的材料和簡單的說明手冊，協助訂閱者開發新的興趣，讓您在探索自己的路上樂趣滿載。</p>
                 </div>
             </div>
@@ -1015,12 +1199,12 @@
                 </div>
             </form>
             <div class="form_image">
-                <img data-aos="fade-right" data-aos-easing="linear" data-aos-duration="3000"
-                     width="180px" height="180px"
-                    src="./image/歷史查詢icons/歷史查詢icon-02.png" alt="">
+                <img data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="3000" width="180px"
+                    height="180px" src="./image/歷史查詢icons/歷史查詢icon-02.png" alt="">
             </div>
             <div class="form_image2">
-                <img data-aos="fade-left" data-aos-easing="linear" data-aos-duration="3000" width="180px" height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
+                <img data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="3000" width="180px"
+                    height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
         </div>
     </div>
 
@@ -1179,11 +1363,14 @@
                         <p>信箱:hobbyboxtw@gmail.com</p>
                     </div>
                 </div>
-                <div class="contact_images">
+                <div class="contact_images hvr-wobble-bottom">
                     <img src="./image/contact-02.png" alt="">
                 </div>
             </div>
         </div>
+    </div>
+    <div id="backToTop">
+        <i class="fas fa-angle-up"></i>
     </div>
 
     <footer id="footer">
@@ -1274,6 +1461,7 @@
             },
         });
     </script>
+
     <!-- sticky navbar -->
     <script>
         window.onscroll = function () { myFunction() };
