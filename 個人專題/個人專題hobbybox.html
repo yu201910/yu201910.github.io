@@ -13,10 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
     <link href="css/hover-min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <title>興趣箱</title>
 
     <style>
@@ -645,17 +644,6 @@
             margin: 0;
         }
 
-        /* 返回頂層 */
-        #backToTop {
-            position:fixed;
-            right:20px;
-            bottom: 50px;
-            width:50px;
-            height:50px;
-            border-radius: 999em;
-            background-color: white;
-        }
-
         @media (max-width: 1280px) {
 
             /* 本月主題預告 */
@@ -672,6 +660,48 @@
             }
         }
 
+        @media (max-width: 1024px) {
+
+            /* 關於興趣箱大平板 */
+            .about_image_group1 {
+                margin: 0 0 15px 146px;
+            }
+
+            .about_image_group1 img {
+                width: 40%;
+                margin: 0 15px 0 0px;
+            }
+
+            .about_image_group2 img {
+                width: 75%;
+                margin: 0px 0 30px 146px;
+            }
+
+            /* 使命大平板*/
+            #misson {
+                height: 287px;
+
+            }
+
+            .misson_all {
+                padding: 2%;
+            }
+
+
+            /* 本月主題預告 */
+            .theme_image img {
+                height: 100%;
+            }
+
+            .theme_text p {
+                margin: 50px 0;
+            }
+
+            .theme_text {
+                margin: -8px 20px 0px;
+            }
+        }
+
         @media (max-width: 992px) {
             .navbar-toggle {
                 position: relative;
@@ -685,17 +715,68 @@
                 position: absolute;
                 top: 56px;
                 z-index: 10;
+                width: 35%;
             }
 
             #navbarToggleExternalContent.menu-show {
-                transform: translateX(-15%);
-                padding: 30px 40px 100vh 40px;
+                transform: translateX(-8%);
+                padding: 30px 0px 100vh 0px;
                 opacity: 0.8;
             }
 
+            .navbar_all ul li {
+                line-height: 2;
+                padding: 0 15px;
+            }
+
+            .navbar_all ul li:hover {
+                background: #938075;
+                transition: all 0.4s ease
+            }
+
+
             .navbar_all ul li a {
                 color: rgb(255, 255, 255);
+                font-weight: 400;
             }
+
+            .navbar_all ul li:hover .dropdown:after {
+                opacity: 0;
+            }
+
+            .navbar_all ul li ul {
+                padding: 0;
+                text-align: left;
+                position: absolute;
+                width: 150px;
+                left: 265px;
+                top: 0px;
+                z-index: 12;
+                background-color: rgba(0, 0, 0, 0.781);
+                transition-duration: 0.5s;
+                height: 0;
+                overflow: hidden;
+            }
+
+            /* 歷史查詢平板 */
+            .form {
+                height: 460px;
+            }
+
+            .form_image {
+                top: 282px;
+                left: 40px;
+            }
+
+            .form_image2 {
+                top: 282px;
+                right: 40px;
+            }
+
+            .form .btn {
+                margin: 0 5px;
+            }
+
         }
 
         @media (max-width: 768px) {
@@ -713,6 +794,15 @@
 
             #misson {
                 height: 290px;
+            }
+
+            /* 興趣箱類型平板 */
+            .mask {
+                width: 82%;
+            }
+
+            .mask p {
+                font-size: 15px;
             }
 
             /* 歷史查詢平板 */
@@ -869,6 +959,18 @@
         }
 
         @media (max-width: 414px) {
+
+            /* 漢堡選單 */
+            #navbarToggleExternalContent.menu-show {
+                transform: translateX(-10%);
+            }
+
+            .navbar_all ul li ul {
+                left: 145px;
+                top: 0px;
+
+            }
+
             .contact_images img {
                 width: 100%;
             }
@@ -881,8 +983,22 @@
                 margin: -16px 26px 0px;
             }
         }
+        @media (max-width: 375px) {
+            .navbar_all ul li ul {
+                left: 125px;
+                top: 0px;
+
+            }
+        }
 
         @media (max-width: 320px) {
+         
+            .navbar_all ul li ul {
+                left: 115px;
+                top: 0px;
+
+            }
+
             .about_image_group1 {
                 margin: 0 0 15px 25px;
             }
@@ -988,7 +1104,7 @@
             </div>
         </div>
     </nav>
-
+    <!-- 關於興趣箱 -->
     <div id="about" class="container">
         <div class="title">
             <h3>關於興趣箱</h3>
@@ -1034,7 +1150,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 興趣箱內容類型 -->
     <div id="classification" class="classification">
         <div class="container">
             <div class="about_subtitle">
@@ -1136,7 +1252,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 使命 -->
     <div id="misson">
         <div class="misson_all ">
             <div class="container">
@@ -1149,7 +1265,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 本月主題預告 -->
     <div id="theme">
         <div class="theme_all container-fluid">
             <div class="theme_image"><img src="./image/OAIGQU0.jpg" alt=""></div>
@@ -1165,7 +1281,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 歷史查詢 -->
     <div id="form" class="form">
         <div class="container">
             <div class="form_title ">
@@ -1207,7 +1323,7 @@
                     height="180px" src="./image/歷史查詢icons/歷史查詢-03.png" alt=""></div>
         </div>
     </div>
-
+    <!-- 訂閱方案 -->
     <div id="subscription" class="subscription">
         <div class="container">
             <div class="subscription_all">
@@ -1270,7 +1386,7 @@
             </div>
         </div>
     </div>
-
+    <!-- 聯絡表單 -->
     <div id="contact">
         <div class="contact_all_title">
             <h2>聯絡我們</h2>
@@ -1282,35 +1398,35 @@
                 </div>
                 <form>
                     <div class="form-group row">
-                        <label for="inputName" class="col-sm-3 col-form-label">姓名</label>
-                        <div class="col-sm-9">
+                        <label for="inputName" class=" col-md-4 col-xl-3 col-form-label">姓名</label>
+                        <div class=" col-md-8 col-xl-9">
                             <input type="text" class="form-control" id="inputName" placeholder="Name"
                                 required="required">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputPhone" class="col-sm-3 col-form-label">電話</label>
-                        <div class="col-sm-9">
+                        <label for="inputPhone" class="col-md-4 col-xl-3 col-form-label">電話</label>
+                        <div class="col-md-8 col-xl-9">
                             <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
-                        <div class="col-sm-9">
+                        <label for="inputEmail3" class="col-md-4 col-xl-3 col-form-label">Email</label>
+                        <div class="col-md-8 col-xl-9">
                             <input type="email" class="form-control" id="inputEmail3" placeholder="Email"
                                 required="required">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">留言內容</label>
-                        <div class="col-sm-9"> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                placeholder="請輸入文字" required="required"></textarea>
+                        <label for="exampleFormControlTextarea1" class="col-md-4 col-xl-3 col-form-label">留言內容</label>
+                        <div class="col-md-8 col-xl-9"> <textarea class="form-control" id="exampleFormControlTextarea1"
+                                rows="3" placeholder="請輸入文字" required="required"></textarea>
                         </div>
 
                     </div>
                     <div class="form-group row">
-                        <label for="exampleFormControlFile1" class="col-sm-3 ">照片上傳</label>
-                        <input type="file" class="form-control-file col-sm-9" id="exampleFormControlFile1">
+                        <label for="exampleFormControlFile1" class="col-md-4 col-xl-3">照片上傳</label>
+                        <input type="file" class="form-control-file col-md-8" id="exampleFormControlFile1">
                     </div>
                     <div class="form-group row justify-content-center">
                         <div class="justify-content-center">
@@ -1319,6 +1435,7 @@
                     </div>
                 </form>
             </div>
+            <!-- 常見問題、聯絡資訊 -->
             <div class="contact_detail">
                 <div class="contact_question">
                     <button type="button" class="btn btn-dark btn-lg hvr-pulse-shrink" data-toggle="modal"
@@ -1369,10 +1486,8 @@
             </div>
         </div>
     </div>
-    <div id="backToTop">
-        <i class="fas fa-angle-up"></i>
-    </div>
 
+    <!-- footer頁尾 -->
     <footer id="footer">
         <div class="container">
             <div class="social_title">Follow us</div>
